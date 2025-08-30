@@ -1,0 +1,24 @@
+.onigiri{
+	font-family:"MS PGothic", "Mona", sans-serif;
+	font-size: 16pt;
+	line-height: 18px;
+  color: #000000;
+
+  
+}
+
+.under {
+  text-align: center;
+  color: black;
+  font-family: MS PGothic;
+}
+.body {
+  background: linear-gradient(#29ceff,#ff8cbd,#ffffff,#ff8cbd,#29ceff);
+
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  text-align: center;
+}

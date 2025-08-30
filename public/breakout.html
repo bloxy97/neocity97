@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBDRIVER BREAKOUT</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.8/Tone.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Tiny5&display=swap');
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+        font-family: "Tiny5", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          position: relative;
+    overflow: hidden; /* Prevents scrollbars */
+    }
+    canvas {
+      border: 0px solid #000;
+      display: block; /* Removes any gap below the canvas */
+    }
+ #counter { font-size: 24px; position: absolute; bottom: 10px; left: 10px; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        let isBreakoutMode = false;
+        let redRect, blueRect; // Variables to store the rectangles' details
+
+        function resizeCanvas() { 
+            canvas.width = window.innerWidth; 
+            canvas.height = window.innerHeight; 
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        function drawRectangle(x, y, width, height, color) {
+            context.fillStyle = color;
+            context.fillRect(x, y, width, height);
+        }
+
+        function changeSizeAndPosition() {
+            if (isBreakoutMode) return;
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            const newWidth1 = Math.random() * 500 + 10;
+            const newHeight1 = Math.random() * 500 + 10;
+            const newX1 = Math.random() * (canvas.width - newWidth1);
+            const newY1 = Math.random() * (canvas.height - newHeight1);
+            drawRectangle(newX1, newY1, newWidth1, newHeight1, '#ff0000');
+            redRect = { x: newX1, y: newY1, width: newWidth1, height: newHeight1 };
+
+            const newWidth2 = Math.random() * 500 + 10;
+            const newHeight2 = Math.random() * 500 + 10;
+            const newX2 = Math.random() * (canvas.width - newWidth2);
+            const newY2 = Math.random() * (canvas.height - newHeight2);
+            drawRectangle(newX2, newY2, newWidth2, newHeight2, '#0000ff');
+            blueRect = { x: newX2, y: newY2, width: newWidth2, height: newHeight2 };
+        }
+
+        setInterval(changeSizeAndPosition, 1000);
+
+   
+    window.addEventListener('load', () => {
+        const oscillator = new Tone.Oscillator(440, "sine").toDestination();
+        oscillator.start();
+
+        function changeFrequency() {
+            const newFrequency = Math.random() * 800 + 200;
+            oscillator.frequency.setValueAtTime(newFrequency, Tone.now());
+        }
+
+        const frequencyInterval = setInterval(changeFrequency, 1000);
+
+        canvas.addEventListener('click', () => {
+            if (!isBreakoutMode) {
+                isBreakoutMode = true;
+                clearInterval(frequencyInterval);
+                oscillator.stop();
+                transitionAnimation();
+            }
+        });
+    });
+
+
+        let count = 0;
+
+      
+
+        setInterval(updateCounter, 1000);
+
+        // Breakout Game Setup
+        let paddle, ball, bricks = [];
+        let transitionFrame = 0;
+        const transitionFrames = 60; // Duration of the transition in frames
+
+        function initBreakoutGame() {
+            paddle = { x: canvas.width / 2 - 35, y: canvas.height - 20, width: 70, height: 10, dx: 5 };
+            ball = { x: canvas.width / 2, y: canvas.height - 30, size: 16, speed: 4, dx: 3, dy: -3 };
+
+            bricks = [];
+            const rows = 5;
+            const cols = 10;
+            const padding = 10;
+            const offsetX = 30;  // Padding from the left edge
+            const offsetY = 60;  // Padding from the top edge
+            const brickWidth = (canvas.width - offsetX * 2 - padding * (cols - 1)) / cols;
+            const brickHeight = 20;
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const x = offsetX + c * (brickWidth + padding);
+                    const y = offsetY + r * (brickHeight + padding);
+                    bricks.push({ x, y, width: brickWidth, height: brickHeight, visible: true });
+                }
+            }
+        }
+
+        function drawPaddle() {
+            context.fillStyle = '#0000ff';
+            context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+        }
+
+        function drawBall() {
+            context.fillStyle = '#0000ff';
+            context.fillRect(ball.x - ball.size / 2, ball.y - ball.size / 2, ball.size, ball.size);
+        }
+
+        function drawBricks() {
+            bricks.forEach(brick => {
+                if (brick.visible) {
+                    context.fillStyle = '#ff0000';
+                    context.fillRect(brick.x, brick.y, brick.width, brick.height);
+                }
+            });
+        }
+
+let bricksHit = 0; // Initialize the counter for bricks hit
+
+function updateCounter() {
+    const countStr = bricksHit.toString().padStart(4, '0');
+    document.getElementById('counter').textContent = `breakout.flv - slide ${countStr}`;
+}
+
+
+
+    // Initialize a variable to keep track of reload
+    let hasReloaded = false;
+
+    function updateBall() {
+        ball.x += ball.dx;
+        ball.y += ball.dy;
+
+        if (ball.x + ball.size / 2 > canvas.width || ball.x - ball.size / 2 < 0) {
+            ball.dx *= -1;
+        }
+
+        if (ball.y - ball.size / 2 < 0) {
+            ball.dy *= -1;
+        }
+
+        if (ball.y + ball.size / 2 > canvas.height && !hasReloaded) {
+            // Ball fell out of bounds, reload the page
+            hasReloaded = true;
+            location.reload();
+        }
+
+        // Paddle collision
+        if (ball.x > paddle.x && ball.x < paddle.x + paddle.width && ball.y + ball.size / 2 > paddle.y) {
+            ball.dy *= -1;
+        }
+
+        // Brick collision
+        bricks.forEach(brick => {
+            if (brick.visible) {
+                if (ball.x > brick.x && ball.x < brick.x + brick.width && ball.y - ball.size / 2 < brick.y + brick.height && ball.y + ball.size / 2 > brick.y) {
+                    ball.dy *= -1;
+                    brick.visible = false;
+                    bricksHit++; // Increment bricks hit counter
+
+                    // Check if all bricks are hit
+                    if (bricksHit === bricks.length) {
+                        location.reload(); // Reload the page if all bricks are hit
+                    }
+                }
+            }
+        });
+    }
+
+
+
+
+setInterval(updateCounter, 1000);
+
+
+        function updatePaddlePosition(event) {
+            const rect = canvas.getBoundingClientRect();
+            paddle.x = event.clientX - rect.left - paddle.width / 2;
+        }
+
+        canvas.addEventListener('mousemove', updatePaddlePosition);
+
+       function transitionAnimation() {
+    transitionFrame++;
+    const progress = transitionFrame / transitionFrames;
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Target position and size for the red rectangle to match the brick cluster
+    const targetRedX = 30;  // This is the offsetX from initBreakoutGame
+    const targetRedY = 60;  // This is the offsetY from initBreakoutGame
+    const targetRedWidth = canvas.width - 60; // Target width for the cluster of bricks
+    const targetRedHeight = 100; // Target height for the cluster of bricks
+
+    const redRectX = redRect.x + (targetRedX - redRect.x) * progress;
+    const redRectY = redRect.y + (targetRedY - redRect.y) * progress;
+    const redRectWidth = redRect.width + (targetRedWidth - redRect.width) * progress;
+    const redRectHeight = redRect.height + (targetRedHeight - redRect.height) * progress;
+    drawRectangle(redRectX, redRectY, redRectWidth, redRectHeight, '#ff0000');
+
+    // Blue rectangle shrinking into paddle and ball
+    const targetBlueX = canvas.width / 2 - 35; // Paddle x-position
+    const targetBlueY = canvas.height - 20; // Paddle y-position
+    const blueRectX = blueRect.x + (targetBlueX - blueRect.x) * progress;
+    const blueRectY = blueRect.y + (targetBlueY - blueRect.y) * progress;
+    const blueRectWidth = blueRect.width + (70 - blueRect.width) * progress;
+    const blueRectHeight = blueRect.height + (10 - blueRect.height) * progress;
+    drawRectangle(blueRectX, blueRectY, blueRectWidth, blueRectHeight, '#0000ff');
+
+    if (transitionFrame < transitionFrames) {
+        requestAnimationFrame(transitionAnimation);
+    } else {
+        initBreakoutGame();
+        gameLoop();
+    }
+}
+
+
+        function gameLoop() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawPaddle();
+            drawBall();
+            drawBricks();
+            updateBall();
+            if (isBreakoutMode) requestAnimationFrame(gameLoop);
+        }
+
+        canvas.addEventListener('click', () => {
+            if (!isBreakoutMode) {
+                isBreakoutMode = true;
+                transitionAnimation();
+            }
+        });
+
+
+
+    </script>
+    <div id="counter"></div>
+</body>
+</html>

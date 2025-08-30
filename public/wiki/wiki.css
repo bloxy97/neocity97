@@ -1,0 +1,171 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  background: #031200 url("/wiki/img/gikoshii.png") repeat; /*Replace with your own background*/
+	color: #101000
+	}
+	
+	img {
+	   border: 5px inset #FFFFFF;
+     margin: 0.25em 0.25em;
+	}
+
+a:link {
+  color: #0d8500;
+   text-decoration: none;
+  }
+a:visited {
+  color: #084d01;
+   text-decoration: none;
+  }
+  a:hover {
+     text-decoration: underline;
+  }
+
+/*Main text section*/
+.main { 
+    /*The border radius thing is what gave it rounded corners.*/
+  /*border-radius: 5px;*/
+  background: #EFEFEF;
+  border: 5px solid white;
+  border-style: outset;
+  width: 500px;
+  padding:15px;
+  margin: 20px 25px 25px 400px;
+  /*The 7px is vertical and horizontal offset for the shadow, if you want to change it.*/
+  /*box-shadow: 7px 7px rgb(0, 0, 0, 0.78);*/
+  }
+.ascii {
+border: 5px black;
+  }
+/*Prevent overflow of large images*/
+.main img, .sidebar-left img {
+  max-width: 100%;
+  height: auto;
+  }
+  
+/*Sidebar*/
+.sidebar-left {
+  background: #fefefe;
+  border: 5px solid #0d8500;
+  border-style: outset;
+  width: 250px;
+  margin-left:75px;
+  padding:15px;
+  margin-top:-25px;
+  min-height:100%;
+  position:fixed;
+  overflow:auto;
+  text-align:center;
+  }
+  
+/*Use with <ul> to create a button section in the sidebar.*/
+.buttons {
+  list-style-type:none;
+  padding:3px;
+  }
+  
+/*Use with <li> for individual buttons.*/
+.button { 
+  text-align:center;
+  /*border-radius: 5px;*/
+  border: 5px solid white;
+  border-style: outset;
+  padding: 10px;
+  margin:5px;
+  margin-top:10px;
+  margin-bottom:10px;
+  background: #EFEFEF;
+  color: #CCFFCC;
+  font-family: 'Open Sans', monospace;
+  }
+  
+.button:active {
+  border-style:inset;
+  
+}
+  
+.sideimage { /*optional*/
+  right: 30px;
+  bottom:-20px;
+  float: right;
+  position: fixed;
+  max-width: 450px;
+  
+  }
+  
+.sideimage img {
+  max-width: 100%;
+  height: auto;  
+  image-rendering: optimizespeed;
+  border: none;
+  }
+
+  
+@media(max-width: 1440px) {
+    .sideimage {
+      max-width: 0%;
+      /*if this can be executed, override the previous rule, otherwise hide the side image*/
+      max-width: calc(100% - 975px);
+      }
+  }
+  
+@media(max-width: 1200px) {
+    .sidebar-left {
+      margin-left: 25px;
+      }
+    
+    .main {
+      margin-left: 350px;
+      }
+  
+    .sideimage {
+      right: 5px;
+      max-width: 0%;
+      /*if this can be executed, override the previous rule, otherwise hide the side image*/
+      max-width: calc(100% - 900px);
+      }
+  }
+  
+@media(max-width: 1000px) {
+  
+    .sidebar-left {
+      margin-left: 5px;
+      }
+    
+    .main {
+      margin-left: 330px;
+      }
+  
+    .sideimage {
+      /*don't even bother at this point*/
+      display: none;
+      }
+  }
+
+  
+/*Tentative mobile support.*/
+@media(orientation:portrait) {
+  .sidebar-left {
+    min-height:0px;
+    width: 100%;
+    margin: 0 auto;
+    top:0;
+    left: 0;
+    padding: 0;
+    font-size: 0.9em;
+    position: relative;
+    border-radius: 5px;
+    }
+    
+  .main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    }
+    
+  .sideimage {
+    /*don't even bother*/
+    display: none;
+    }
+  }

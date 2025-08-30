@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Known from coast to coast like butter and toast!</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+                      
+           <link href="busy_base2.css" rel="stylesheet" type="text/css">
+            <link href="/honeycomb.css" rel="stylesheet" type="text/css" media="all">
+           <link href="/busy_base2_skin2.css" rel="stylesheet" type="text/css">
+          
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+     <!----- 
+ 
+                                     ,
+              ,-.       _,---._ __  / \
+             /  )    .-'       `./ /   \
+            (  (   ,'            `/    /|
+             \  `-"             \'\   / |
+              `.              ,  \ \ /  |
+               /`.          ,'-`----Y   |
+              (            ;        |   '
+              |  ,-.    ,-'         |  /
+              |  | (   |            | /
+              )  |  \  `.___________|/
+              `--'   `--'
+ 
+    * windows reskin lovingly created by june @ loveberry.neocities.org / layercake.neocities.org
+    * original multiple song music player by adilene @ adilene.net. [https://pastebin.com/PiDgrv3J] 
+    * edited using 98 css [https://jdan.github.io/98.css/]
+ 	* source code: https://github.com/sayantanm19/js-music-player
+																	----->
+ 
+<!-- stuff you can probably edit without breaking the styling lol --> 
+<style>
+    .title-bar {
+        background:linear-gradient(90deg, #000033,#000000);
+    }
+ 
+    .player {
+        width:fit-content;
+        border: black solid 1px;
+        border-width: 1px 0px 0px 1px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+ 
+    .controlimg:hover {
+        cursor:help;
+    }
+     .videobox {
+    width: 312px; 
+    height: 100px; 
+    position: fixed;
+    bottom: 40px; /*adjust the position on the page*/
+    right: 20px; /*adjust the position on the page*/
+    z-index: 9999;
+}
+</style>
+ 
+<!-- below is styling to get windows 98 effect. from 98.css [https://jdan.github.io/98.css/] --> 
+<style>
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+}
+ 
+input[type="range"]:focus {
+  outline: none;
+}
+ 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 21px;
+  width: 11px;
+  background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-horizontal.svg");
+  transform: translateY(-8px);
+  box-shadow: none;
+  border: none;
+}
+ 
+input[type="range"].has-box-indicator::-webkit-slider-thumb {
+  background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-rectangle-horizontal.svg");
+  transform: translateY(-10px);
+}
+ 
+input[type="range"]::-moz-range-thumb {
+  height: 21px;
+  width: 11px;
+  border: 0;
+  border-radius: 0;
+  background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-horizontal.svg");
+  transform: translateY(2px);
+}
+ 
+input[type="range"]::-moz-range-thumb {
+  background: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-horizontal.svg");
+  border: 0;
+  border-radius: 0;
+  height: 21px;
+  transform: translateY(2px);
+  width: 11px;
+  }
+ 
+input[type="range"].has-box-indicator::-moz-range-thumb {
+  background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-rectangle-horizontal.svg");
+  transform: translateY(0px);
+}
+ 
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  box-sizing: border-box;
+  background: black;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  box-shadow: 1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 0 0 darkgrey,
+    -1px -1px 0 darkgrey, 0 -1px 0 darkgrey, -1px 1px 0 white, 1px -1px darkgrey;
+}
+ 
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  box-sizing: border-box;
+  background: black;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  box-shadow: 1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 0 0 darkgrey,
+    -1px -1px 0 darkgrey, 0 -1px 0 darkgrey, -1px 1px 0 white, 1px -1px darkgrey;
+}
+ 
+button,input,label,option,select,table,textarea,ul.tree-view{-webkit-font-smoothing:none;font-family:"Pixelated MS Sans Serif",Arial;font-size:11px}h1{font-size:5rem}h2{font-size:2.5rem}h3{font-size:2rem}h4{font-size:1.5rem}u{border-bottom:.5px solid #222;text-decoration:none}button,input[type=reset],input[type=submit]{border:none;border-radius:0;box-sizing:border-box;color:transparent;min-height:23px;min-width:75px;padding:0 12px;text-shadow:0 0 #222}.vertical-bar,button,input[type=reset],input[type=submit]{background:silver;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf}.vertical-bar{height:20px;width:4px}button:not(:disabled):active,input[type=reset]:not(:disabled):active,input[type=submit]:not(:disabled):active{box-shadow:inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;text-shadow:1px 1px #222}@media (not(hover)){button:not(:disabled):hover,input[type=reset]:not(:disabled):hover,input[type=submit]:not(:disabled):hover{box-shadow:inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey}}button:focus,input[type=reset]:focus,input[type=submit]:focus{outline:1px dotted #000;outline-offset:-4px}button::-moz-focus-inner,input[type=reset]::-moz-focus-inner,input[type=submit]::-moz-focus-inner{border:0}:disabled,:disabled+label,input[readonly],input[readonly]+label{color:grey}:disabled+label,button:disabled,input[type=reset]:disabled,input[type=submit]:disabled{text-shadow:1px 1px 0 #fff}}
+ 
+.title-bar-controls button {border:none;border-radius:0;box-sizing:border-box;color:transparent;min-height:23px;min-width:75px;padding:0 12px;text-shadow:0 0 #222}
+ 
+.title-bar-controls button {background:silver;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf}
+ 
+.title-bar-controls button:not(:disabled):active {box-shadow:inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;text-shadow:1px 1px #222}
+ 
+@media (not(hover)){
+	button:not(:disabled):hover {
+    box-shadow:inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey}
+}
+ 
+.title-bar-controls button:focus {outline:1px dotted #000; outline-offset:-4px}
+.title-bar-controls button::-moz-focus-inner {border:0}
+ 
+ 
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://files.catbox.moe/1za99g.woff") format("woff");
+  src: url("https://files.catbox.moe/8fwbkl.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://files.catbox.moe/z7csle.woff") format("woff");
+  src: url("https://files.catbox.moe/moqhx6.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+ 
+ 
+.window, .title-bar {
+  font-family: "Pixelated MS Sans Serif", Arial;
+  -webkit-font-smoothing: none;
+  font-size: 11px;
+}
+ 
+.window {
+  box-shadow: inset -1px -1px #0a0a0a,
+    inset 1px 1px #dfdfdf, inset -2px -2px #808080,
+    inset 2px 2px #ffffff;
+  background: #c0c0c0;
+  padding: 3px;
+  width:260px;
+}
+ 
+.title-bar {
+  padding: 3px 2px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.title-bar-text {
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0;
+  margin-right: 24px;
+}
+ 
+.title-bar-controls {
+  display: flex;
+}
+ 
+.title-bar-controls button {
+  padding: 0;
+  display: block;
+  min-width: 16px;
+  min-height: 14px;
+}
+ 
+.title-bar-controls button:active {
+  padding: 0;
+}
+ 
+.title-bar-controls button:focus {
+  outline: none;
+}
+ 
+.title-bar-controls button[aria-label=Minimize]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/main/icon/minimize.svg");
+background-position:bottom 3px left 4px;
+background-repeat:no-repeat}
+ 
+.title-bar-controls button[aria-label=Maximize]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/4a2282dd9170cabf730fb5803d1153d86b2e94e3/icon/maximize.svg");
+background-position:top 2px left 3px;
+background-repeat:no-repeat}
+ 
+.title-bar-controls button[aria-label=Close]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/main/icon/close.svg");
+background-position:top 3px left 4px;
+background-repeat:no-repeat;
+margin-left:2px}
+ 
+.window-body { margin:0px; height:98px; }
+ 
+ 
+ 
+input[type=range] {
+        -webkit-appearance: none;
+        appearance:none;
+        width: 100%;
+    }
+ 
+    input[type=range]:focus {
+        outline: none;
+    }
+ 
+    /* settings for chrome browsers */
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px; /* thickness of seeking track */
+        cursor: help;
+    }
+ 
+ 
+    /* settings for firefox browsers */
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 2px; /* thickness of seeking track */
+        cursor: help;
+    }
+ 
+    .flex {display: flex;}
+ 
+    .titlebaricon { height:14px; width:14px;}
+ 
+ 
+    .songtitlewindow {
+        background-color:#fff;
+        box-shadow:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+    }
+ 
+    #musicplayer {
+        border:2px solid silver; /* border around player */
+        border-width: 2px 0px 0px 0px;
+        width:160px; /* width of the player */
+    }
+ 
+    #imagestyle {
+        background:silver; /* background color of player */
+        border:2px solid silver; /* border around player */
+        width:95px; /* width of the player */
+        height:95px;
+        box-shadow:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+    }
+ 
+    .ic {
+    	width:90px;
+        position:relative;
+        bottom:1px;
+        right:1px;
+        overflow:hidden;
+        padding:2px;
+        border:2px solid transparent;
+    }
+ 
+    .songtitlearrow {
+        background-size:100%;
+        background-repeat:no-repeat;
+        background-image:url(https://files.catbox.moe/f5e8np.png);
+        height:21px;
+        width:21px;
+        position:relative;
+        top:2px;
+        left:-2px;
+        border:0px solid transparent;
+        border-width:0px 0px 0px 0px;
+    }
+ 
+    .songtitle {
+        padding:5px; /* padding around song title */
+        border-bottom:0px; /* border under song title */
+        display:block;
+        font-family:Pixelated MS Sans Serif;
+    }
+ 
+    .controls {
+        font-size:18px !important; /* size of controls */
+        text-align:center;
+        width:100%;
+        position:relative;
+        bottom:10px;
+    }
+ 
+    .controls td {
+        padding:8px 5px 0px 5px; /* padding around controls */
+    }
+ 
+    button {
+        min-width:40px;
+    }
+ 
+    .seeking {
+        background-color:#c0c0c0; /* background color of seeking bar */
+        display:flex;
+        justify-content: space-evenly;
+        padding:14px; /* padding around seeking bar */
+    }
+ 
+    .current-time {
+        padding-right:5px;
+    }
+ 
+    .total-duration {
+        padding-left:5px;
+    }
+ 
+    .controlimg {
+    height:15px;
+    width:15px;
+    }
+</style>
+</head>
+<body>
+  
+  <script>NekoType="silver"</script>
+<h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a 
+href="https://webneko.net">Neko</a></h1>
+  
+    <span id="top"></span>
+    <div class="wrapper">
+   <div class=sidebar>
+    <div class="sidebar-image"><div class=inner><img src="images/bannerroom.png"></div></div>
+    <div class=box>
+      <div class=inner>
+        <style>
+          {
+          background-color: gray
+          }
+        </style>
+        
+        
+        <p>there have been 
+    
+    <!-- FC2 Counter  Starts here -->
+<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40225590&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40225590&main=1" /></noscript>
+<!-- FC2 Counter  Ends here -->
+ visitors.</p>
+
+   <p><a href="/wiki/home#credit">Credits</a></p>
+    </div>
+      </div>
+    </div>
+        <div class="main-wrapper">
+            <div class="title">
+              <div class=marquee>
+                       <marquee> 
+            Welcome to Bloxy Bloxanna Bloxxinator's Museum! Known from coast to coast like butter and toast! From headlines to bedlines, schoolrooms to pool rooms, no other place in the contiguous United States or other enviroments of the world. Welcome!
+            </marquee></div>
+                <div class="box">
+                    <div class="inner">
+                        
+                        <img src="images/Banners.png" alt="Hi" style="width:auto;">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <div class="box">
+                    <div class="inner">
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="banner.html">Banner Room</a></li>
+                            <li><a href="socials.html">Socials</a></li>
+                            <li><a href="blog.html">Blog???</a></li>
+                             <li><a href="/wiki/home.html">Wiki</a></li>
+                            <li class="last"><a href="surprise.html">Click this for a surprise</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+             <div class=box>
+             <div class=inner>
+           <p>Welcome to the banner room! this room has a bunch of banner... button... things?? I don't really know, but enjoy. Subject to change, probably. </p>
+        
+          
+        </div>
+      </div>
+          <div class=box>
+             <div class=inner>
+        <img src="https://anlucas.neocities.org/aimlink.gif">
+        <img src="https://anlucas.neocities.org/gmail.gif">
+        <img src="https://anlucas.neocities.org/icon6.gif">
+        <img src="https://anlucas.neocities.org/made_with_windows.gif">
+        <img src="https://anlucas.neocities.org/office97.gif">
+        <img src="https://anlucas.neocities.org/classicgaming.gif">
+        <img src="https://anlucas.neocities.org/davesclassics.gif">
+        <img src="https://anlucas.neocities.org/nescenter.gif">
+        <img src="https://kopawz.neocities.org/buttonhoard/buttonsfolder/kriswheretfarewe.png">
+        <img src="https://kopawz.neocities.org/indexgraphics/buttondecor/ilikecomputer.png">
+        <a href="/surprise.html"><img src="https://anlucas.neocities.org/click_here.gif"></a>
+        <img src="https://anlucas.neocities.org/psbutton.gif">
+        <img src="https://anlucas.neocities.org/apple_fatal_error.gif">
+        <img src="/images/ratpilled.gif">
+        <img src="/images/mspaint.gif">
+        <img src="/images/windowsxp.png">
+        <img src="/images/portal.jpg">
+        <img src="/images/dithering.gif">
+        <img src="/images/2chnow.gif">
+        <img src="/images/shobon.png">
+        <img src="/images/parental.gif">
+        <img src="/images/truecolour.png">
+        <img src="/images/shii.gif">  
+        <img src="/images/nanami.gif">   
+        <img src="/images/tetom.gif">
+        <img src="/images/wikiasucks.gif">
+        <img src="/images/sky.png">   
+        <img src="/images/nowebp.gif">
+        <img src="/images/kys.gif">
+        <img src="/images/1firefox3.gif">
+        <img src="/images/1wiki.gif">
+        <img src="/images/autism.gif">
+        </div>
+          </div>
+          <div class="box">
+            <div class="inner">
+              <h2> Site Buttons</h2>
+              <p>buttons for other neocities and websites.</p>
+              <p><a href="https://frutigeraeroarchive.org/"><img src="https://bloxy97.neocities.org/images/frutigeraeroarchive_button.png"></a>
+              <a href="https://cdp1802.net/"><img src="https://bloxy97.neocities.org/images/1802.gif"></a>
+              <a href="https://barrarchiverio.7m.pl/p/error/"><img src="images/generror_btn.gif"></a> 
+              <a href="https://eggramen.neocities.org" title="Eggramen"><img src="images/eggramen.png"></a>
+              <a href="https://riceballman.web.fc2.com/" title="2ch Project"><img src="images/onigiri.gif"></a>
+              <a href="https://blinkie.wiki/" title="blinkie wiki"><img src="images/blinkiewiki-scroll.gif"></a>
+              <a href="https://nonexistentfandomsfandom.neocities.org/" title="Non-existent Fandoms Fandom"><img src="images/nonexistent.gif"></a>
+              <a href='https://blinkies.cafe' target='_blank'><img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!'></a>
+              <a href="https://mooeena.neocities.org"><img src="images/mooeena.png"></a><iframe src="//incr.easrng.net/badge?key=changeme" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+              <a href="http://soybeanthegal.neocities.org/" title="I LOVE PENIS!!!!!!"><img src="images/penis.png"></a>
+              <a href="https://www.minecraft.net/" title="I LOVE MINECRAFTING!!!!!!"><img src="images/minecraft.gif"></a>
+              <a href="https://clownmodius.neocities.org/" title="I LOVE CLOWNS!!!!!"><img src="images/clownbutton.png"></a>
+              <a href="https://99gifshop.neocities.org"><img src="https://99gifshop.neocities.org/img/88x31.0.png"></a>
+              <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif"></a>
+              <a href="https://www.albinoblacksheep.com/"><img src="https://www.albinoblacksheep.com/image/button/8831w.png"></a>
+              <a href="https://neocities.org/"><img src="https://owlman.neocities.org/OwlMan/Banners/neocities_button.gif"></a>
+              <a href="https://monar.neocities.org/"><img src="images/monar.png"></a>
+              <a href="https://nukocities.neocities.org"><img src="images/nukocities.gif"></a>
+              <a href="https://loveweb.neocities.org/"><img src="images/loveweb-button.gif"></a>
+              <a href="https://ublockorigin.com/"><img src="images/ublock-now.png"></a>
+              <a href="https://planetclue.com/"><img src="images/banner-planetclue.gif"></a>
+              </p>
+            </div> 
+          </div>
+         
+          <div class=box>
+             <div class=inner>
+             <img src="https://pixelsafari.neocities.org/dividers/more/kirby.gif">
+             <h2> Misc size section </h2>
+             <p>These arent banner sized, but look cool anyway :)</p>
+             <img src="https://echoesoftheend.neocities.org/the%20skeleton%20appears.gif">
+             <a href="https://starthere.neocities.org"><img src="https://owlman.neocities.org/OwlMan/Banners/StaRT_HERE.jpg"></a>
+             <img src="https://kopawz.neocities.org/stamphoard/stamps/danckity.gif">
+             <img src="https://gligar.neocities.org/tism.png">
+             <img src="https://kopawz.neocities.org/stamphoard/stamps6/undertale.png">
+             <img src="https://kopawz.neocities.org/stamphoard/stamps2/kriswhere.png">
+             <img src="images/nyaner.gif">
+             <img src="https://kopawz.neocities.org/stamphoard/stamps/silly.jpg">
+             <img src="https://kopawz.neocities.org/stamphoard/stamps5/deltarune.gif"> 
+             <img src="images/catportal.gif">
+             <img src="images/ocmusic.gif">
+             <img src="images/gameboy.gif">
+             <img src="images/caramel.gif">
+             <img src="images/spamHelp.png">
+             <img src="images/sands.png">
+             <img src="images/epicvstroll.jpg">
+             <img src="images/dvd.gif">
+             <img src="images/dogcar.gif">
+             <img src="images/tetou.gif">
+             <img src="images/tetomstamp.gif">
+             <img src="images/tetob.gif">
+             <img src="images/swordfight.jpg">
+             <img src="images/happyhome.jpg">
+             <img src="images/hq.jpg">
+             <img src="images/wiggly.png">
+             <img src="images/loyal.gif">
+             <img src="images/idrinkglitterglue.png">
+             <img src="images/luvxp.png">
+             <img src="images/old.png">
+             <img src="images/penis.jpg">
+             <img src="images/miku.png">
+             <img src="images/lomando.png">
+             <img src="images/gamecube.png">
+             <img src="images/tally.png">
+             <img src="images/g11.gif">
+             <img src="images/e109.gif">
+             <img src="images/e110.gif">
+             <img src="images/e89.jpg">
+             <img src="images/e46.png">
+             <img src="images/e1.png">
+             <img src="images/a48.png">
+             <img src="images/ascii.png">
+             <img src="images/citation.png">
+             
+             </div>
+          </div>
+            <div class=box>
+             <div class=inner>
+               
+               <h2>BLINKIES</h2>
+               blink blink blink blinky blink
+               heres some blinkys
+                <p> <img src="/images/tallyhall.gif">
+                 <a href="https://blinkies.cafe/"><img src="/images/anakin.gif"></a>
+                 <img src="/images/msp.gif">
+                 <img src="/images/ftsio.gif">
+                 <img src="/images/oreo.gif">
+                 <img src="/images/sexuality2.gif">
+                 <img src="/images/dos-3.gif">
+                 <img src="/images/evil-leafy.gif">
+                 <img src="/images/glitch.gif">
+                 <img src="/images/nintendo-64.gif">
+                 <img src="/images/q5.gif">
+                 <img src="/images/dvds.gif">
+                 <img src="/images/she-took-my-fucking-wife-in-the-divorce.gif">
+                 <img src="/images/scene-checkers-fast-blinkie.gif">
+                 <img src="/images/windows-9x-2000.gif">
+                 <img src="/images/transrights.gif">
+                 <img src="/images/25.gif">
+                 <img src="/images/game-of-life-blinkie-red.gif">
+                 <img src="/images/x26.gif">
+                 <img src="/images/teto.gif">
+                 <img src="/images/digital.gif">
+                 <img src="/images/e12.gif">
+                 <img src="/images/nyanblinkie.gif">
+                 <img src="/images/tenna.gif">
+                 </p>
+              </div>
+            </div>  
+            <div class="box">
+              <div class="inner" id="hexa">
+                <h2> HONEY COMB STAMPS</h2>
+               <p> everything after the Oatchi stamp is made by me, feel free to use them</p>
+                <div class="noborder">
+                <div class="honeycomb hc-12">
+                   <img src="/images/pansexual.png">
+                   <img src="/images/aseprite.png">
+                   <img src="/images/autism.png">
+                   <img src="/images/html.png">
+                   <img src="/images/paintdotnet.png">
+                   <img src="/images/ms_paint.png">
+                   <img src="/images/playstation.gif">
+                   <img src="/images/tama.gif">
+                   <img src="/images/Win98dialup.gif">
+                   <img src="/images/Win98internetclick.gif">
+                   <img src="/images/Win98mycomp.png">
+                   <img src="/images/Win98paint.png">
+                   <img src="/images/windows.gif">
+                   <img src="/images/WinXPmsn.png">
+                   <img src="/images/WinXPpaint.png">
+                   <img src="/images/Oatchi.png">
+                   <img src="/images/censor.png">
+                   <img src="/images/mado.png">
+                   <img src="/images/onion.png">
+                   <img src="/images/syobon.png">
+                   <img src="/images/onionshell.png">
+                   <img src="/images/cloud.png">
+                   <img src="/images/peanutonion.png">
+                   <img src="/images/rocketonion.png">
+                   <img src="/images/bufffurry.png">
+                   <img src="/images/nekothwomp.png">
+                   <img src="/images/cloud.gif">
+                   <img src="/images/horriblynamedbear.png">
+                   <img src="/images/angle.gif">
+                   <img src="/images/mrdefrag.png">
+                   <img src="/images/molalla.png">
+                   <img src="/images/shroom.png">
+                   <img src="/images/evilfuckingshroom.png">
+                   <img src="/images/star.png">
+                   <img src="/images/fire.png">
+                   <img src="/images/coin.png">
+                   <img src="/images/monastamp.png">
+                   <img src="/images/moralarstamp.png">
+                   <img src="/images/gikostamp.png">
+                   <img src="/images/shiistamp.png">
+                   <img src="/images/nyanstamp.png">
+                   <img src="/images/nyangirlstamp.png">
+                   <img src="/images/starvoxstamp.png">
+                   <img src="/images/infotanstamp.png">
+                   <img src="/images/mushstamp.png">
+                   <img src="/images/srgstamp.png">
+                   <img src="/images/sunneestamp.png">
+                   <img src="/images/sunneestamp2.png">
+                </div>
+                </div>
+                <p> The last two bug characters are made by @sunn8654, and the blue girl next to the bugs is made by @ryan_man. They're very good artists !!!</p>
+              </div>
+            </div>
+               
+          <div class="box">
+                    <div class="inner">
+                       <h2> whaaat, my website button???? you'd really use it? </h2>
+                       <p> feel free to use these! </p>
+                       <p> <img src="images/bigbutton.gif">   <textarea class="big_textarea" id="layout_content" readonly><a href="https://bloxy97.neocities.org"><img src="bigbutton.gif"></a></textarea>  </p>
+                           <p> <img src="images/button.gif">   <textarea class="big_textarea" id="layout_content" readonly><a href="https://bloxy97.neocities.org"><img src="button.gif"></a></textarea>  </p>
+                           <p>heres some alternate ones too~</p>
+                           <p><img src="images/nyanvoxbutton.gif"><img src="images/nyanbutton.png"><img src="images/starinfo.png"></p>
+                           <img src="/images/bloxybloxxinator.gif"> 
+                           <textarea class="big_textarea" id="layout_content" readonly><a href="https://bloxy97.neocities.org"><img src="bloxybloxxinator.gif"></a>
+                           </textarea>
+                           <p> heres some stamps by yours truly!</p>
+                           <p><img src="images/stamp.png"> <img src="images/starvox97.png"><img src="images/merchandisecat.png"></p>
+                    </div>
+                </div>
+       </div>
+         <div class=footer>
+      <div class=box><div class=inner> 
+      <div class=inner>site template made by <a href="https://eggramen.neocities.org">EGGRAMEN!</a> <a href="#top"><img src="images/back.gif"></a>
+     
+     
+      </div></div>
+      </div>
+    </div>
+    
+    
+      </div>
+<div class=videobox>
+<div class="player">
+<div class="window">
+  <div class="title-bar">
+    <div class="title-bar-text"><sub><img class="titlebaricon" src="https://files.catbox.moe/tg55zp.png" alt="cd player icon"></sub> CD player</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div class="flex">
+<div id="imagestyle"><img class="ic" src="images/starvoxbounty.png" alt="momo icon"></div>
+    <div id="musicplayer">
+        <div class="songtitlewindow">
+            <div class="flex"><marquee scrollamount="4" class="songtitle"></marquee><div class="songtitlearrow"></div></div>
+        </div>
+ 
+ <div class="seeking">
+            <div class="current-time">00:00</div>
+ 
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+ 
+            <div class="total-duration">0:00</div>
+        </div>
+ 
+        <table class="controls">
+            <tr>
+                <td>
+                    <div class="prev-track" onclick="prevTrack()"><button><img src="https://files.catbox.moe/hhoh1h.png" class="controlimg"></button></div>
+                </td>
+                <td>
+                    <div class="playpause-track" onclick="playpauseTrack()" ><button><img src="https://files.catbox.moe/w93riq.png" class="controlimg"></button></div>
+                </td>
+                <td>
+                    <div class="next-track" onclick="nextTrack()"><button><img src="https://files.catbox.moe/p4q9gf.png" class="controlimg"></button></div>
+                </td>
+            </tr>
+        </table>
+ 
+        <audio id="music" src=""></audio> 
+    </div>
+    </div>
+  </div>
+</div>
+    </div>
+</div>
+  </body>
+  <script>
+        // initiate variables
+        let track_name = document.querySelector(".songtitle");
+ 
+        let playpause_btn = document.querySelector(".playpause-track");
+        let next_btn = document.querySelector(".next-track");
+        let prev_btn = document.querySelector(".prev-track");
+ 
+        let seek_slider = document.querySelector(".seek_slider");
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+ 
+        let track_index = 0;
+        let isPlaying = false;
+        let updateTimer;
+ 
+        // create new audio element
+        let curr_track = document.getElementById("music");
+ 
+        //
+        // DEFINE YOUR SONGS HERE!!!!!
+        // MORE THAN FOUR SONGS CAN BE ADDED!!
+        // JUST ADD ANOTHER BRACKET WITH NAME AND PATH
+        // CATBOX.MOE IS RECOMMENDED FOR UPLOADING MP3 FILES
+        let track_list = [
+            {
+                name:"Today's Results - Pikmin",
+                path:"https://files.catbox.moe/4bo9xg.mp3"
+            },
+            {
+                name:"Hidden in the Sand - tallyhall",
+                path:"https://files.catbox.moe/xm8ger.mp3"
+            },
+            {
+                name:"No More - Manfred Minnich",
+                path:"https://files.catbox.moe/u86zql.mp3"
+            },
+            {
+                name:"Slow Battle - PONOS",
+                path:"https://files.catbox.moe/kbtzy1.mp3"
+            }
+        ];
+        //
+        //
+        //
+        //
+        //
+ 
+        function loadTrack(track_index) {
+            clearInterval(updateTimer);
+            resetValues();
+ 
+            // load a new track
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+ 
+            // update details of the track
+            track_name.textContent = "playing " + (track_index + 1) + " of " + track_list.length + ": " + track_list[track_index].name;
+ 
+            // set an interval of 1000 milliseconds for updating the seek slider
+            updateTimer = setInterval(seekUpdate, 1000);
+ 
+            // move to the next track if the current one finishes playing 
+            curr_track.addEventListener("ended", nextTrack);
+        }
+ 
+        // reset values
+        function resetValues() {
+            curr_time.textContent = "0:00";
+            total_duration.textContent = "0:00";
+            seek_slider.value = 0;
+        }
+ 
+        // checks if song is playing
+        function playpauseTrack() {
+            if (!isPlaying) playTrack();
+            else pauseTrack();
+        }
+ 
+        // plays track when play button is pressed
+        function playTrack() {
+            curr_track.play();
+            isPlaying = true;
+ 
+            // replace icon with the pause icon
+            playpause_btn.innerHTML = '<button><img src="https://files.catbox.moe/njer0s.png" class="controlimg"></i></button>';
+        }
+ 
+        // pauses track when pause button is pressed
+        function pauseTrack() {
+            curr_track.pause();
+            isPlaying = false;
+ 
+            // replace icon with the play icon
+            playpause_btn.innerHTML = '<button><img src="https://files.catbox.moe/w93riq.png" class="controlimg"></button>';
+        }
+ 
+        // moves to the next track
+        function nextTrack() {
+            if (track_index < track_list.length - 1)
+                track_index += 1;
+            else track_index = 0;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // moves to the previous track
+        function prevTrack() {
+            if (track_index > 0)
+                track_index -= 1;
+            else track_index = track_list.length;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // seeker slider
+        function seekTo() {
+            seekto = curr_track.duration * (seek_slider.value / 100);
+            curr_track.currentTime = seekto;
+        }
+ 
+        function seekUpdate() {
+            let seekPosition = 0;
+ 
+            // check if the current track duration is a legible number
+            if (!isNaN(curr_track.duration)) {
+                seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+                seek_slider.value = seekPosition;
+ 
+            // calculate the time left and the total duration
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+ 
+            // adding a zero to the single digit time values
+            if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+            if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+            if (currentMinutes < 10) { currentMinutes = currentMinutes; }
+            if (durationMinutes < 10) { durationMinutes = durationMinutes; }
+ 
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent = durationMinutes + ":" + durationSeconds;
+          }
+        }
+ 
+        // load the first track in the tracklist
+        loadTrack(track_index);
+    </script>
+</html>
+

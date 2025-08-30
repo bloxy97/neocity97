@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Mona';
+  src: url(https://nonexistentfandomsfandom.neocities.org/mona.woff)
+  }
+
+@font-face {
+  font-family: 'Courier New';
+  src: url(https://nonexistentfandomsfandom.neocities.org/courierNew.woff)
+  }
+
+ #8831 img {
+            width: 88px;
+            height: 31px;
+            border: 0px;
+            border-style: outset;
+ }
+
+body {
+  font-family: "Mona", sans-serif;
+  font-size: 15px;
+  background: #031200 url("ba.gif") fixed; /*Replace with your own background*/
+	color: black
+	}
+	
+code {
+  font-family: 'Courier New', 'Courier', monospace;
+  }
+  
+table, th, td {
+  border: 2px solid white;
+}
+
+table {
+  border-style: outset;
+}
+
+th, td {
+  border-style: inset;
+}
+
+blockquote {
+	padding:10px;
+  border: 5px solid white;
+  border-style: ridge;
+} 
+/*	
+a {
+  color: #91F72C;
+  }
+*/
+
+/*Main text section*/
+.main { 
+  /*The border radius thing is what gave it rounded corners.*/
+  /*border-radius: 5px;*/
+  background: #EFEFEF;
+  border: 5px solid white;
+  border-style: outset;
+  width: 500px;
+  padding:15px;
+  margin: 20px 25px 25px 400px;
+  /*The 7px is vertical and horizontal offset for the shadow, if you want to change it.*/
+  /*box-shadow: 7px 7px rgb(0, 0, 0, 0.78);*/
+  }
+  
+/*Prevent overflow of large images*/
+.main img, .sidebar-left img {
+  border: 5px solid white;
+  border-style: inset;
+  max-width: 100%;
+  height: auto;
+  }
+  
+/*Sidebar*/
+.sidebar-left {
+  background: #CCFFCC;
+  border: 5px solid white;
+  border-style: outset;
+  width: 250px;
+  margin-left:75px;
+  padding:15px;
+  margin-top:-25px;
+  min-height:100%;
+  position:fixed;
+  overflow:auto;
+  text-align:center;
+  /*The 7px is vertical and horizontal offset for the shadow, if you want to change it.*/
+  /*box-shadow: 7px 7px rgb(0, 0, 0, 0.78);*/
+  }
+  
+/*Use with <ul> to create a button section in the sidebar.*/
+.buttons {
+  list-style-type:none;
+  padding:3px;
+  }
+  
+/*Use with <li> for individual buttons.*/
+.button { 
+  text-align:center;
+  /*border-radius: 5px;*/
+  border: 5px solid white;
+  border-style: inset;
+  padding: 10px;
+  margin:5px;
+  margin-top:10px;
+  margin-bottom:10px;
+  background: #EFEFEF;
+  color: #CCFFCC;
+  font-family: 'Courier New', 'Courier', monospace;
+  }
+  
+.sideimage { /*optional*/
+  right: 30px;
+  bottom:-20px;
+  float: right;
+  position: fixed;
+  max-width: 450px;
+  }
+  
+.sideimage img {
+  max-width: 100%;
+  height: auto;  
+  }
+
+ul {
+  list-style-type: ">> ";
+}
+  
+.footer {
+  text-align: right;
+  margin-left: 475px;
+  width: 500px;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  }
+
+  
+@media(max-width: 1440px) {
+    .sideimage {
+      max-width: 0%;
+      /*if this can be executed, override the previous rule, otherwise hide the side image*/
+      max-width: calc(100% - 975px);
+      }
+  }
+  
+@media(max-width: 1200px) {
+    .sidebar-left {
+      margin-left: 25px;
+      }
+    
+    .main {
+      margin-left: 350px;
+      }
+  
+    .sideimage {
+      right: 5px;
+      max-width: 0%;
+      /*if this can be executed, override the previous rule, otherwise hide the side image*/
+      max-width: calc(100% - 900px);
+      }
+  }
+  
+@media(max-width: 1000px) {
+  
+    .sidebar-left {
+      margin-left: 5px;
+      }
+    
+    .main {
+      margin-left: 330px;
+      }
+  
+    .sideimage {
+      /*don't even bother at this point*/
+      display: none;
+      }
+  }
+
+  
+/*Tentative mobile support.*/
+@media(orientation:portrait) {
+  .sidebar-left {
+    min-height:0px;
+    width: 100%;
+    margin: 0 auto;
+    top:0;
+    left: 0;
+    padding: 0;
+    font-size: 0.9em;
+    position: relative;
+    /*border-radius: 5px;*/
+    }
+    
+  .main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    }
+    
+  .footer {
+    width: 80%;
+    padding: 5%;
+    margin: 0 auto;
+    }
+    
+  .sideimage {
+    /*don't even bother*/
+    display: none;
+    }
+  }
