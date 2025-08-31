@@ -94,6 +94,10 @@ border: 5px black;
   
   }
   
+.bubble {
+  bottom: -100px;
+}
+
 .sideimage img {
   max-width: 100%;
   height: auto;  
