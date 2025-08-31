@@ -96,7 +96,7 @@ border: 5px black;
   
 .bubble {
   position: relative;
-  bottom: 85px;
+  bottom: -85px;
 }
 
 .sideimage img {
