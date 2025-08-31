@@ -101,11 +101,11 @@ border: 5px black;
 .blurb {
   position: absolute;
   text-align: center;
-  width: 200;
-  height: 200;
+  width: 215px;
+  height: 200px;
   color: #000000;
   top: 4%;
-  right: 40%;
+  right: 27%;
   font-family: MS PGothic, Mona;
   font-size: 24px;
 }
