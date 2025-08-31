@@ -96,7 +96,16 @@ border: 5px black;
   
 .bubble {
   position: relative;
-  bottom: -85px;
+  bottom: -75px;
+}
+.blurb {
+  position: absolute;
+  text-align: center;
+  color: #000000;
+  top: 25%;
+  right: 40%;
+  font-family: MS PGothic, Mona;
+  font-size: 24px;
 }
 
 .sideimage img {

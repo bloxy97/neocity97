@@ -104,7 +104,10 @@
 
 <div class=sideimage>
   <div class="bubble">
-    <img src="\wiki\img\balloon.png">
+    <img src="img/balloon.png" onclick="flavormytext()">
+    <div class="blurb" id="flavortext">
+      Welcome to the Bloxxiki!
+    </div>
   </div>
 <div class="nyanko">
   <img src="img/temp.png">
@@ -144,5 +147,21 @@
   <p> <h2 id=4koma>FIRST BATCH (9/6/25): </h2></p>
   <p> <img src="/wiki/img/movie.png"><img src="/wiki/img/cinder.png"> </p>
     </div>
+
+     <script>
+        function flavormytext() {
+            const randomStrings = [
+              "I'm Info-tan!", 
+              "Hiiiiiiiiiiii :3",
+              "...",
+              "Stop poking me."
+              ];
+            const randomIndex = Math.floor(Math.random() * randomStrings.length);
+            const selectedString = randomStrings[randomIndex];
+            const flavor = document.getElementById("flavortext");
+            flavor.textContent = selectedString;
+        }
+    </script>
+
   </body>
 </html>
