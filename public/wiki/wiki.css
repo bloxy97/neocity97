@@ -202,7 +202,6 @@ border: 5px black;
   height : 100%;
   width : 100%;
   transform : translate(-50%,-50%);    
-  background-color: rgba(0,0,0);
   transition : all ease-in-out 600ms;
 }
 
