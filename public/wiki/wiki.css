@@ -196,11 +196,10 @@ border: 5px black;
 .splash{
   cursor : pointer;
   position : fixed;
-  background: url("/images/splashbg.png") repeat;
-  top : 50%;
-  left : 50%;
-  height : 100%;
-  width : 100%;
+  top : 5%;
+  left : 5%;
+  height : 10%;
+  width : 10%;
   transform : translate(-50%,-50%);    
   transition : all ease-in-out 600ms;
 }
