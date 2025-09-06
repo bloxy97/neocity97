@@ -171,7 +171,34 @@ border: 5px black;
       }
   }
 
-  
+  .hidden{
+  transition : 0.5s;
+  display : none;
+}
+.splash-header {
+  height : 90%;
+  color : white;
+  font-family : consolas;
+  font-size : 30px;
+  display : flex;
+  justify-content: center;
+  align-items : center;
+}
+
+.splash{
+  cursor : pointer;
+  position : fixed;
+  background: url("\images\splashbg.png");
+  top : 50%;
+  left : 50%;
+  height : 100%;
+  width : 100%;
+  transform : translate(-50%,-50%);    
+  background-color: rgba(0,0,0);
+  transition : all ease-in-out 600ms;
+}
+
+
 /*Tentative mobile support.*/
 @media(orientation:portrait) {
   .sidebar-left {
