@@ -152,19 +152,14 @@
 
     <div class="splash">
       <div class="noborder">
-      <h1 class = "splash-header"><img src="\images\blurb.png"></h1>
+      <h1 class = "splash-header"><img id="blurb" onclick="flip()" src="/images/blurb.png"></h1>
       </div>
     </div>
 
     <script>
-      var splashScreen = document.querySelector('.splash');
-splashScreen.addEventListener('click',()=>{
-  splashScreen.style.opacity = 0;
-  setTimeout(()=>{
-    splashScreen.classList.add('hidden')
-  },610)
-})
-
+      function flip()
+        const gif = document.getElementById('blurb');
+            gif.src = '/images/blurbclose.gif'; 
     </script>
 
      <script>
