@@ -160,7 +160,16 @@
       function flip() {
         const gif = document.getElementById('blurb');
             gif.src = '/images/blurbclose.gif'; 
+            timeout = setTimeout(hide, 800);
             }
+      function hide() {
+        var splashScreen = document.querySelector('.splash')
+           splashScreen.style.opacity = 0;
+              setTimeout(()=>{
+                splashScreen.classList.add('hidden')
+              },610)
+            }
+      
     </script>
 
      <script>
