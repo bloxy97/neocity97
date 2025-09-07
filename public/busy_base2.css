@@ -21,7 +21,6 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  text-decoration: none;
   }
   
 .links li {
@@ -44,10 +43,6 @@ body {
 .links li:before, .links li:after {
   letter-spacing: 0.1em;
   }
-.links li:before, .links li:after {
-  letter-spacing: 1em;
-  }
-  
 /*Basic box code that is used for all content boxes on the page.*/
 .box {
   border: 1px solid black;

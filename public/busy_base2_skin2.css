@@ -64,7 +64,7 @@ a, .links li:before, .links li:after, .links .last {
   }
 
 .links li:after {
-  content: " -";
+  content: " - ";
   }
 
 .links .last:after {
