@@ -29,8 +29,6 @@ a:visited {
   background: #EFEFEF;
   border: 5px solid white;
   border-style: outset;
-  display: flex;
-  justify-content: center;
   width: 500px;
   padding:15px;
   margin: 20px 25px 25px 400px;
@@ -49,7 +47,7 @@ border: 5px black;
 /*Sidebar*/
 .sidebar-left {
   background: #fefefe;
-  border: 5px solid #0d8500;
+  border: 5px solid #a2ff98;
   border-style: outset;
   width: 250px;
   margin-left:75px;
