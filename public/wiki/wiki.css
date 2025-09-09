@@ -43,6 +43,11 @@ border: 5px black;
   max-width: 100%;
   height: auto;
   }
+
+  .main img {
+    display: flex;
+    justify-content: center;
+  }
   
 /*Sidebar*/
 .sidebar-left {
