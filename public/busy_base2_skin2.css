@@ -11,7 +11,7 @@ body {
     background-position: 0 0;
   }
   to {
-    background-position: -1512px 0; /* adjust the X offset based on image size */
+    background-position: -1909px 0; /* adjust the X offset based on image size */
   }
 }
 
