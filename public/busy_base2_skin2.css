@@ -4,6 +4,7 @@ body {
   background: url("/images/bikminbg.png") repeat fixed;
   font-family: "Readex Pro", Open Sans, sans-serif;
   animation: scroll 30s linear infinite;
+  text-decoration: none;
 }
 
 @keyframes scroll {
@@ -27,6 +28,13 @@ body {
      margin: 0.25em 0.25em;
    
 }
+.info {
+  position: absolute;
+  display: flex;
+  left: 37%;
+  top: 18%;
+  size: 200%;
+}
 .noborder img {
   border: none;
   width: 100%;
@@ -37,6 +45,7 @@ body {
 .inner {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 a, .links li:before, .links li:after, .links .last {
   color: #1896ca;
