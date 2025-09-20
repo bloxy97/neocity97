@@ -2,7 +2,7 @@
 
 body {
   background: url("/images/bikminbg.png") repeat fixed;
-  font-family: "Readex Pro", Open Sans, sans-serif;
+  font-family: "MS UI Gothic", Tahoma;
   animation: scroll 30s linear infinite;
   text-decoration: none;
 }
