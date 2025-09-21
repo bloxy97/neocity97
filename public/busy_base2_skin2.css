@@ -6,7 +6,10 @@ body {
   animation: scroll 30s linear infinite;
   text-decoration: none;
   cursor: url(/cur/star.png), auto;
-  cursor: url(/cur/starclick.png), pointer;
+}
+
+a:hover {
+  cursor: url('/cur/starclick.png'), auto;
 }
 
 @keyframes scroll {
