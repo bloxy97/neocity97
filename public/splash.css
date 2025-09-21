@@ -21,8 +21,12 @@
 
 body {
   background: url("/images/splashbg.png") repeat;
+  cursor: url('/cur/star.gif'), auto;
 }
 
+a:hover {
+  cursor: url('/cur/starclick.gif'), auto;
+}
 .orbs {
   top: -25%;
   left: 74%;
