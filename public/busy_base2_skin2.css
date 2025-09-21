@@ -23,6 +23,7 @@ body {
   color: white;
   border: 5px outset rgb(05,05,05,0.85);
   padding: 0.75em 1.25em;
+  text-decoration: none;
   }
 .box img {
      margin: 0.25em 0.25em;
