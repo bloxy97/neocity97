@@ -5,8 +5,8 @@ body {
   font-family: "MS UI Gothic", Tahoma;
   animation: scroll 30s linear infinite;
   text-decoration: none;
-  cursor: url(cur/star.cur) auto;
-  cursor: url(cur/starclick.cur) pointer;
+  cursor: url(cur/star.png) auto;
+  cursor: url(cur/starclick.png) pointer;
 }
 
 @keyframes scroll {
