@@ -2,7 +2,7 @@
 
 body {
   background: url("/images/bikminbg.png") repeat fixed;
-  font-family: "MS UI Gothic", Tahoma;
+  font-family: "MS UI Gothic", "Mona", Tahoma;
   animation: scroll 30s linear infinite;
   cursor: url('/cur/star.gif'), auto;
 }
@@ -12,7 +12,7 @@ a:hover {
   cursor: url('/cur/starclick.gif'), auto;
 }
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 a:visited {
    text-decoration: none;
