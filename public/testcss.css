@@ -4,6 +4,19 @@ body {
   margin: 0;
   font-family: MS PGothic, Mona;
   }
+
+.bar link {
+  padding: 5px 0;
+  border-radius: 10px;
+}
+
+.bar img:hover {
+  filter: brightness(200%);
+}
+
+.bar img:active {
+  filter: brightness(50%);
+}
   
 /*Everything goes inside here.*/
 .wrapper {
@@ -13,14 +26,17 @@ body {
   
 .tabber button {
   border-bottom: none !important;
-  border: 3px black outset;
+  border: 1px black outset;
   background: white;
   display: static;
-  margin-bottom: -15px;
+  padding: 0 10px;
+  height: 22px;
+  margin-bottom: -10px;
+  z-index: 999;
 }
 
 button:active {
-  border: 3px black inset;
+  border: 1px black inset;
 }
 
 .tabber {
