@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  font-family: MS PGothic, Mona;
   }
   
 /*Everything goes inside here.*/
@@ -9,10 +10,6 @@ body {
   width: 900px;
   margin: 0 auto;
   }
-
-.main-content {
-    padding: 5px;
-}
   
 .sidebar-img, .footer, .title, .links, .box {
   margin-top: 25px;
@@ -61,6 +58,18 @@ body {
   
   }
   
+.main-content {
+    padding: 5px;
+}
+
+.title-text {
+  text-align: left;
+  font-size: 64px;
+  margin-top: 69px;
+  line-height: 40px;
+  margin-left: -10px;
+}
+
 /*Prevent image overflow.*/
 .box img, .sidebar img {
   max-width: 100%;
@@ -90,6 +99,7 @@ body {
   /*! padding: 5px; */
   /*! display: grid; */
   line-break: anywhere;
+  margin-top: 150px;
   }
   
 /*Two columns by default. The "single-column" class can be added to make it one column.*/
@@ -97,7 +107,19 @@ body {
   columns: 2;
   column-gap: 25px;
   }
+h1, h2, h3, h4, h5 {
+  text-align: left;
+}
   
+.title .box {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background: url("https://placecats.com/673/125"); 
+  /*! padding: ; */
+  margin-top: 33px;
+}
+
 /*Make sure boxes don't spread over multiple columns.*/
 .main .box {
   display: inline-block;
@@ -108,10 +130,11 @@ body {
   }
   
 .footer {
-  margin-top: 25px;
+  margin-top: 26px;
   border-top: 1px black solid;
   /*! display: flex; */
   padding: 0px;
+  padding-bottom: 10px;
   }
   
 @media(max-width:915px) {
