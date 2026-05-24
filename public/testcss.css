@@ -11,6 +11,23 @@ body {
   margin: 0 auto;
   }
   
+.tabber button {
+  border-bottom: none !important;
+  border: 3px black outset;
+  background: white;
+  display: static;
+  margin-bottom: -15px;
+}
+
+button:active {
+  border: 3px black inset;
+}
+
+.tabber {
+  align-content: left;
+  text-align: left;
+}
+
 .sidebar-img, .footer, .title, .links, .box {
   margin-top: 25px;
   }
@@ -65,8 +82,8 @@ body {
 .title-text {
   text-align: left;
   font-size: 64px;
-  margin-top: 69px;
-  line-height: 40px;
+  margin-top: 44px;
+  line-height: 72px;
   margin-left: -10px;
 }
 
@@ -99,7 +116,7 @@ body {
   /*! padding: 5px; */
   /*! display: grid; */
   line-break: anywhere;
-  margin-top: 150px;
+  margin-top: 50px;
   }
   
 /*Two columns by default. The "single-column" class can be added to make it one column.*/
@@ -118,6 +135,7 @@ h1, h2, h3, h4, h5 {
   background: url("https://placecats.com/673/125"); 
   /*! padding: ; */
   margin-top: 33px;
+  padding-bottom: 0px;
 }
 
 /*Make sure boxes don't spread over multiple columns.*/

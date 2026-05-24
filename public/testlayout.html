@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="/testcss.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
+
 <body>
     <span id="top"></span>
     <div class="wrapper">
@@ -32,22 +34,76 @@
         </div>
         <div class="main-wrapper">
             <div class="title">
+
                 <div class="box">
                     <div class="title-text">
-                        Title
+                        BlahBlashBlah
+                    </div>
+                    <div class="tabber">
+                        <button class="tab" onclick="openTab('test1')">Test 1</button>
+                        <button class="tab" onclick="openTab('test2')">Test 2</button>
+                        <button class="tab" onclick="openTab('test3')">Test 3</button>
                     </div>
                 </div>
                 <div class="main-content">
-                    <h2>Title mini</h2>
-                    BlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlah
+                    <div id="test1" class="content">
+                        <h2>Look!</h2>
+                        <p>I'm a tabber!</p>
+                    </div>
+
+                    <div id="test2" class="content" style="display:none">
+                        <h2>Hey...</h2>
+                        <p>How come i'm the second one?</p>
+                    </div>
+
+                    <div id="test3" class="content" style="display:none">
+                        <h2>...</h2>
+                        <p> Mario: Time to take a piss.
+
+                            Splashing can be heard as Mario takes a piss
+
+                            Goomba: What the hell are you doing?
+
+                            Mario: I'm taking a piss!
+
+                            Goomba: Ok but why aren't you jumping at me? That's what you're supposed to do.
+
+                            Mario: I might do it fucking later.
+
+                            Goomba: No! I'm a motherfucking enemy: you're supposed to jump at me.
+
+                            Mario: Okey dokey, then. Let me pull up my pants again first and then MAYBE I'll jump on
+                            you.
+
+                            Goomba: Maybe? MAYBE?! ARE YOU OUT OF YOUR FUCKING MIND?! NO! JUMP ON ME NOW MOTHERFUCKER!
+
+                            Mario: Let me get my pants first.
+
+                            Goomba: sigh Fine. </p>
+                    </div>
+
+
+
                 </div>
                 <div class="footer">
-                    site template made by
-                    <a href="https://eggramen.neocities.org">EGGRAMEN!</a>
+                    Blash Blah?
+
                     <a href="#top"><img src="images/back.gif"></a>
                 </div>
             </div>
+            <script>
+                function openTab(tabs) {
+                    var i;
+                    var x = document.getElementsByClassName("tab");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    document.getElementById(tabs).style.display = "block";
+                }
+            </script>
         </div>
     </div>
+
 </body>
+
 </html>
