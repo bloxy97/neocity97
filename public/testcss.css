@@ -9,6 +9,10 @@ body {
   width: 900px;
   margin: 0 auto;
   }
+
+.main-content {
+    padding: 5px;
+}
   
 .sidebar-img, .footer, .title, .links, .box {
   margin-top: 25px;
