@@ -21,6 +21,14 @@ img.new {
   margin-bottom: -1px !important;
 }
 
+.name {
+  font-size: 26px;
+  text-shadow: 0px 5px 10px #fff;
+  filter: drop-shadow(5px 0px 10px #fff);
+  margin-top: -10px;
+  margin-bottom: -15px;
+}
+
 .link-title img {
   margin: 5px 0;
   border: 2px black solid;
@@ -42,7 +50,7 @@ img.new {
 .wrapper {
   width: 1004px;
   margin: 0 auto;
-  margin-bottom: 35%;
+  margin-bottom: 60%;
   }
   
 .tabber button {
