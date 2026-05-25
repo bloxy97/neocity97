@@ -70,22 +70,6 @@ button:active {
   display: inline-block;
   }
 
-/*Some fancy code for fun, to add special characters around the navigation links. Change content to "" if you don't want these.*/
-.links li:before {
-  content: "ã€Œ";
-  }
-  
-.links li:after {
-  content: "ã€ âˆ· ";
-  }
-  
-.links .last:after {
-  content: "ã€";
-  }
-  
-.links li:before, .links li:after {
-  letter-spacing: 0.1em;
-  }
 /*Basic box code that is used for all content boxes on the page.*/
 .box {
   border: 1px solid black;
@@ -93,6 +77,10 @@ button:active {
   background: url("https://files.catbox.moe/yztlhq.png") #383838 repeat-x;
   }
   
+.link-title {
+  line-height: 8px;
+}
+
 /*Goes inside the box class. Not given any style by default, but can be used for stuff like fancy borders.
 
 .inner {
