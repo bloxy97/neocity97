@@ -3,20 +3,23 @@
 body {
   margin: 0;
   font-family: MS PGothic, Mona;
+  color: white;
   }
 
 .bar img {
   margin: 5px 0;
   border: 1px black solid;
   margin-left: -5px;
+  width: 200px !important;
+  height: 100px !important;
 }
 
 .bar img:hover {
-  filter: brightness(200%);
+  filter: brightness(125%);
 }
 
 .bar img:active {
-  filter: brightness(50%);
+  filter: brightness(75%);
 }
   
 /*Everything goes inside here.*/
@@ -28,7 +31,7 @@ body {
 .tabber button {
   border-bottom: none !important;
   border: 1px black outset;
-  background: white;
+  background: #545454;
   display: static;
   padding: 0 10px;
   height: 22px;
@@ -53,6 +56,7 @@ button:active {
 .title, .links, .footer {
   text-align: center;
   margin-top: -33px;
+  /*! background: url(""); */
   }
   
 /*Navigation links.*/
@@ -86,6 +90,7 @@ button:active {
 .box {
   border: 1px solid black;
   padding: 0.5em 1em;
+  background: url("https://files.catbox.moe/yztlhq.png") #383838 repeat-x;
   }
   
 /*Goes inside the box class. Not given any style by default, but can be used for stuff like fancy borders.
@@ -98,6 +103,8 @@ button:active {
 
 .main-content {
     padding: 5px;
+    /*! background: url("https://files.catbox.moe/eo8a1j.png"); */
+    text-align: left;
 }
 
 .title-text {
@@ -139,6 +146,8 @@ button:active {
   /*! display: grid; */
   /*! line-break: anywhere; */
   margin-top: 50px;
+  background: url("https://files.catbox.moe/yztlhq.png") #383838 repeat-x;
+  background-position-y: 169px;
   }
   
 /*Two columns by default. The "single-column" class can be added to make it one column.*/
@@ -155,11 +164,11 @@ h1, h2, h3, h4, h5 {
   border-left: none;
   border-right: none;
   border-top: none;
-  background: url("https://placecats.com/703/160"); 
+  background: url("https://placecats.com/758/168?fit=fill"); 
   /*! padding: ; */
   margin-top: 33px;
   padding-bottom: 0px;
-  height: 160px !important;
+  background-position: bottom right;
 }
 
 /*Make sure boxes don't spread over multiple columns.*/
