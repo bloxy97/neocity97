@@ -1,8 +1,13 @@
 /* IT'S ME */
 
+@font-face {
+  font-family: 'Mona';
+  src: url(/mona.woff)
+  }
+
 body {
   margin: 0;
-  font-family: MS PGothic, Mona;
+  font-family: MS PGothic, "Mona";
   color: #fff;
   background: gray;
   background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x;
@@ -19,6 +24,7 @@ img.new {
   /*! display: grid; */
   padding-right: 5px;
   margin-bottom: -1px !important;
+  border-radius: 0px !important;
 }
 
 .name {
