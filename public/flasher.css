@@ -72,6 +72,14 @@ img.new {
   font-family: MS PGothic, Mona;
 }
 
+a {
+  color: #bebebe; 
+}
+
+a:visited {
+  color: #686868; 
+}
+
 button:active {
   border: 1px black inset;
 }
