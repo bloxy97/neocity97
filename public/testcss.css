@@ -5,9 +5,10 @@ body {
   font-family: MS PGothic, Mona;
   }
 
-.bar link {
-  padding: 5px 0;
-  border-radius: 10px;
+.bar img {
+  margin: 5px 0;
+  border: 1px black solid;
+  margin-left: -5px;
 }
 
 .bar img:hover {
@@ -20,7 +21,7 @@ body {
   
 /*Everything goes inside here.*/
 .wrapper {
-  width: 900px;
+  width: 1000px;
   margin: 0 auto;
   }
   
@@ -33,6 +34,7 @@ body {
   height: 22px;
   margin-bottom: -10px;
   z-index: 999;
+  font-family: MS PGothic, Mona;
 }
 
 button:active {
@@ -86,11 +88,14 @@ button:active {
   padding: 0.5em 1em;
   }
   
-/*Goes inside the box class. Not given any style by default, but can be used for stuff like fancy borders.*/
+/*Goes inside the box class. Not given any style by default, but can be used for stuff like fancy borders.
+
 .inner {
   
   }
   
+*/
+
 .main-content {
     padding: 5px;
 }
@@ -98,20 +103,21 @@ button:active {
 .title-text {
   text-align: left;
   font-size: 64px;
-  margin-top: 44px;
-  line-height: 72px;
+  margin-top: 75px;
+  line-height: 65px;
   margin-left: -10px;
+  text-shadow: 0 0 5px #0f0f0f, 0 0 10px #0f0f0f, 0 0 20px #fff, 0 0 30px #fff;
 }
 
 /*Prevent image overflow.*/
 .box img, .sidebar img {
-  max-width: 100%;
+  /*! max-width: 100%; */
   height: auto;
   }
   
 /*Wrapper for the sidebar.*/
 .sidebar {
-  width: 210px;
+  width: 225px;
   float: left;
   }
   
@@ -127,11 +133,11 @@ button:active {
   
 /*This is where the title, navbar, and main content all go.*/
 .main-wrapper {
-  margin-left: 225px;
+  margin-left: 240px;
   border: black solid 1px;
   /*! padding: 5px; */
   /*! display: grid; */
-  line-break: anywhere;
+  /*! line-break: anywhere; */
   margin-top: 50px;
   }
   
@@ -142,16 +148,18 @@ button:active {
   }
 h1, h2, h3, h4, h5 {
   text-align: left;
+  line-height: 2px;
 }
   
 .title .box {
   border-left: none;
   border-right: none;
   border-top: none;
-  background: url("https://placecats.com/673/125"); 
+  background: url("https://placecats.com/703/160"); 
   /*! padding: ; */
   margin-top: 33px;
   padding-bottom: 0px;
+  height: 160px !important;
 }
 
 /*Make sure boxes don't spread over multiple columns.*/
