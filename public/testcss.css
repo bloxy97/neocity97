@@ -3,7 +3,8 @@
 body {
   margin: 0;
   font-family: MS PGothic, Mona;
-  color: white;
+  color: #fff;
+  background: gray;
   }
 
 .bar img {
@@ -24,7 +25,7 @@ body {
   
 /*Everything goes inside here.*/
 .wrapper {
-  width: 1000px;
+  width: 1004px;
   margin: 0 auto;
   }
   
@@ -74,7 +75,7 @@ button:active {
 .box {
   border: 1px solid black;
   padding: 0.5em 1em;
-  background: url("https://files.catbox.moe/yztlhq.png") #383838 repeat-x;
+  background: #383838 repeat-x;
   }
   
 .link-title {
@@ -98,7 +99,7 @@ button:active {
 .title-text {
   text-align: left;
   font-size: 64px;
-  margin-top: 75px;
+  margin-top: 104px;
   line-height: 65px;
   margin-left: -10px;
   text-shadow: 0 0 5px #0f0f0f, 0 0 10px #0f0f0f, 0 0 20px #fff, 0 0 30px #fff;
@@ -118,8 +119,24 @@ button:active {
   
 /*Container for the sidebar image.*/
 .sidebar-image {
-  border: 0px solid black;
+  /*! border: 1px solid black; */
+  width: 223px;
+  height: 274px;
+  background: url("https://files.catbox.moe/mqzgay.png");
+  background-size: 675px;
+  image-rendering: pixelated;
+  align-self: center;
+  display: block;
+  margin-left: 1px;
   }
+
+.sidebar-image:hover {
+background-position-x: -226px;
+}
+
+.sidebar-image:active {
+background-position-x: -451px;
+}
   
 /*Remove extra padding line at the bottom of the image.*/
 .sidebar-image img {
@@ -152,11 +169,13 @@ h1, h2, h3, h4, h5 {
   border-left: none;
   border-right: none;
   border-top: none;
-  background: url("https://placecats.com/758/168?fit=fill"); 
+  background: url("https://placecats.com/762/197?fit=fill&position=top"); 
   /*! padding: ; */
   margin-top: 33px;
   padding-bottom: 0px;
   background-position: bottom right;
+  height: 189px;
+  width: 730px;
 }
 
 /*Make sure boxes don't spread over multiple columns.*/
