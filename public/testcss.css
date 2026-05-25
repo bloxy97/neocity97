@@ -5,14 +5,26 @@ body {
   font-family: MS PGothic, Mona;
   color: #fff;
   background: gray;
+  background: url("/images/syopng.png") no-repeat;
   }
 
-.bar img {
+img.new {
+  width: auto !important;
+  height: auto !important;
+  border: none !important;
+  align-items: center;
+  /*! display: grid; */
+  padding-right: 5px;
+  margin-bottom: -1px !important;
+}
+
+.link-title img {
   margin: 5px 0;
-  border: 1px black solid;
+  border: 2px black solid;
   margin-left: -5px;
-  width: 200px !important;
-  height: 100px !important;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
 }
 
 .bar img:hover {
@@ -32,12 +44,13 @@ body {
 .tabber button {
   border-bottom: none !important;
   border: 1px black outset;
-  background: #545454;
+  background: #4a4a4a;
   display: static;
   padding: 0 10px;
   height: 22px;
   margin-bottom: -10px;
   z-index: 999;
+  color: white;
   font-family: MS PGothic, Mona;
 }
 
@@ -119,19 +132,20 @@ button:active {
   
 /*Container for the sidebar image.*/
 .sidebar-image {
-  /*! border: 1px solid black; */
   width: 223px;
   height: 274px;
-  background: url("https://files.catbox.moe/mqzgay.png");
+  background: url("/images/voxlogo.png");
   background-size: 675px;
   image-rendering: pixelated;
   align-self: center;
   display: block;
   margin-left: 1px;
+  filter: drop-shadow(5px 5px 5px #555);
   }
 
 .sidebar-image:hover {
 background-position-x: -226px;
+filter: none;
 }
 
 .sidebar-image:active {
@@ -147,9 +161,6 @@ background-position-x: -451px;
 .main-wrapper {
   margin-left: 240px;
   border: black solid 1px;
-  /*! padding: 5px; */
-  /*! display: grid; */
-  /*! line-break: anywhere; */
   margin-top: 50px;
   background: url("https://files.catbox.moe/yztlhq.png") #383838 repeat-x;
   background-position-y: 169px;
@@ -169,13 +180,14 @@ h1, h2, h3, h4, h5 {
   border-left: none;
   border-right: none;
   border-top: none;
-  background: url("https://placecats.com/762/197?fit=fill&position=top"); 
+  background: url("/images/nyanban.gif"); 
   /*! padding: ; */
   margin-top: 33px;
   padding-bottom: 0px;
   background-position: bottom right;
   height: 189px;
   width: 730px;
+  border-bottom: 5px #4a4a4a solid;
 }
 
 /*Make sure boxes don't spread over multiple columns.*/
