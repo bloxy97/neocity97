@@ -5,7 +5,10 @@ body {
   font-family: MS PGothic, Mona;
   color: #fff;
   background: gray;
-  background: url("/images/syopng.png") no-repeat;
+  background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x;
+  background-size: auto, auto 220px;
+  image-rendering: pixelated;
+  background-color: #141414;
   }
 
 img.new {
@@ -39,6 +42,7 @@ img.new {
 .wrapper {
   width: 1004px;
   margin: 0 auto;
+  margin-bottom: 450px;
   }
   
 .tabber button {
@@ -79,6 +83,10 @@ button:active {
   padding: 0;
   margin: 0;
   }
+
+hr {
+  border: #fff 1px solid;
+}
   
 .links li {
   display: inline-block;
@@ -140,16 +148,16 @@ button:active {
   align-self: center;
   display: block;
   margin-left: 1px;
-  filter: drop-shadow(5px 5px 5px #555);
+  filter: drop-shadow(0px 0px 10px #555);
   }
 
 .sidebar-image:hover {
-background-position-x: -226px;
-filter: none;
+background-position-x: -225px;
+filter: drop-shadow(0px 0px 10px #fff);
 }
 
 .sidebar-image:active {
-background-position-x: -451px;
+background-position-x: -450px;
 }
   
 /*Remove extra padding line at the bottom of the image.*/
