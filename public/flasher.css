@@ -35,6 +35,11 @@ img.new {
   margin-bottom: -15px;
 }
 
+li::marker {
+  content: "⟫";
+  font-size: 1.2em;
+}
+
 .link-title img {
   margin: 5px 0;
   border: 2px black solid;
