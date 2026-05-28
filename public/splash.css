@@ -16,18 +16,6 @@
   align-content: center;
   padding-top: 25%;
 }
-
-.citadel {
-  image-rendering: pixelated;
-  width: 690px;
-  height: 100%;
-  background-image: url("/images/citadels.gif");
-  background-size: 100%;
-  position: fixed;
-  background-repeat: no-repeat;
-  bottom: 0%;
-  background-position: bottom;
-}
  
 .splash {
   position: relative;
@@ -41,6 +29,7 @@
 body {
   background: url("/images/cloudstile.png") repeat;
   cursor: url('/cur/star.gif'), auto;
+  background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x;
 }
 
 a:hover {

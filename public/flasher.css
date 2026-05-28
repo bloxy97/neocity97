@@ -71,7 +71,8 @@ li::marker {
   margin-bottom: -10px;
   z-index: 999;
   color: white;
-  font-family: MS PGothic, Mona;
+  font-family: MS PGothic, "Mona";
+  font-size: 12px;
 }
 
 a {
@@ -133,7 +134,6 @@ hr {
 
 .main-content {
     padding: 5px;
-    /*! background: url("https://files.catbox.moe/eo8a1j.png"); */
     text-align: left;
 }
 
