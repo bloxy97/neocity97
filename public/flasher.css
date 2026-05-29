@@ -15,6 +15,7 @@ body {
   image-rendering: pixelated;
   background-color: #141414;
   margin-bottom: 35%;
+  cursor: url('/cur/star.gif'), auto;
   }
 
 img.new {
@@ -25,6 +26,10 @@ img.new {
   padding-right: 5px;
   margin-bottom: -1px !important;
   border-radius: 0px !important;
+}
+
+a:hover {
+  cursor: url('/cur/starclick.gif'), auto;
 }
 
 .name {
