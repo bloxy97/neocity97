@@ -76,8 +76,6 @@ li::marker {
 }
 
 .overview {
-  position: relative;
-  left: 85%;
   width: 10%;
   align-content: center;
   text-align: center;
@@ -86,6 +84,9 @@ li::marker {
   outline: 1px inset #FFF; 
   outline-offset: -6px;
   background: #EFEFEF !important;
+  color: #000;
+  float: right;
+  margin: 3px;
 }
 
 a {
