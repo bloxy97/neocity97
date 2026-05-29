@@ -61,7 +61,13 @@
                     </div>
                 </div>
                 <div class="main-content">
-                    <div id="t1" class="content" style="display: block;">
+                    <div class="overview">
+                        last listened:<br>
+                        <div id="lastheard-container" class="lastfm"></div>
+                        <a href="https://www.imood.com/users/bloxy97"><img src="https://moods.imood.com/display/uname-bloxy97/fg-cfcfcf/bg-696969/imood.gif" alt="The current mood of bloxy97 at www.imood.com" border="0"></a>
+                    </div> 
+                    
+                    <div id="t1" class="content" style="display: block;">  
                         <h2>Hey There!</h2>
                         <p>I'm the guy running this joint. Pretty cool huh?</p>
                         <p>I'm <b>Bloxy</b>, in legal tender thats <b>bloxy97</b>, but most people just call me Roxy. I'm pan (i &lt;3 my bf) and i am very woke (transgender people deserve free boneless wings (and rights)). I really like the old web and coding.... but I think that's obvious. I also like to draw and play <a href="https://steamcommunity.com/id/funnysugartreat/">Video James</a> very much. I also enjoy a bunch of different media.</p>
@@ -86,9 +92,7 @@
                                 <li>Katamari Damacy (OST)!</li>
                             </ul>
                         <p>And like, maybe some other things.</p>
-                        <div class="overview">
-                            
-                        </div>
+
                     </div>
                     
                 </div>
@@ -106,6 +110,25 @@
                     }
                     document.getElementById(tabs).style.display = "block";
                 }
+            </script>
+            <script>
+                    async function displayLastFM() {
+                        try {
+                            const response = await fetch('https://lastfm-last-played.biancarosa.com.br/bloxy97/latest-song');
+                            const data = await response.json();
+                            const track = data.track;
+
+                            document.getElementById("lastheard-container").innerHTML = `
+                <div id="trackInfo">
+                    <span> <a target="_blank" href="${track.url}">${track.name}</a> - ${track.artist['#text']}</span><br>
+                    <img src="${track.image[1]['#text']}">
+                </div>`;
+                        } catch (error) {
+                            console.error("Fetching failed: ", error);
+                        }
+                    };
+
+                    displayLastFM();
             </script>
         </div>
     </div>

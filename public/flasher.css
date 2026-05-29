@@ -75,6 +75,19 @@ li::marker {
   font-size: 12px;
 }
 
+.overview {
+  position: relative;
+  left: 85%;
+  width: 10%;
+  align-content: center;
+  text-align: center;
+  padding: 16px;
+  border: 1px outset #FFF !important;
+  outline: 1px inset #FFF; 
+  outline-offset: -6px;
+  background: #EFEFEF !important;
+}
+
 a {
   color: #979797; /*omg 97!!!!!!!! ahahah!!!!!!!!*/
 }
