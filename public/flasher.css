@@ -14,8 +14,8 @@ body {
   background-size: auto, auto 220px;
   image-rendering: pixelated;
   background-color: #141414;
-  margin-bottom: 35%;
   cursor: url('/cur/star.gif'), auto;
+  margin-bottom: 150px;
   }
 
 img.new {
@@ -178,6 +178,7 @@ hr {
 .sidebar {
   width: 225px;
   float: left;
+  margin-bottom: 150px;
   }
   
 .sidebar-image {
@@ -273,6 +274,7 @@ h1, h2, h3, h4, h5 {
   .sidebar {
     float: none;
     display: block;
+    margin-bottom: 50px;
     }
 
   .sidebar-image {
