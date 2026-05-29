@@ -89,6 +89,11 @@ li::marker {
   margin: 3px;
 }
 
+.overview img {
+  border: 1px inset white;
+  margin: 5px 0;
+}
+
 a {
   color: #979797; /*omg 97!!!!!!!! ahahah!!!!!!!!*/
 }
