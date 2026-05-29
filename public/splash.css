@@ -19,7 +19,7 @@
  
 .splash {
   position: relative;
-  margin-left: 50%;
+  margin-left: 5%;
   background: url(/images/splash.gif);
   background-repeat: no-repeat;
   width: 816px;
@@ -29,7 +29,11 @@
 body {
   background: url("/images/cloudstile.png") repeat;
   cursor: url('/cur/star.gif'), auto;
-  background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x;
+  background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom aliceblue repeat-x;
+  background-size: auto, auto 220px;
+  image-rendering: pixelated;
+  margin-bottom: 10%;
+  background-color: #141414;
 }
 
 a:hover {
