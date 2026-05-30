@@ -108,15 +108,17 @@ button:active {
 }
 
 a {
-  color: #979797; /*omg 97!!!!!!!! ahahah!!!!!!!!*/
+  color: #ffffff; /*omg 97!!!!!!!! ahahah!!!!!!!!*/
+  text-decoration: underline;
 }
 
 a:visited {
-  color: #686868; 
+  text-decoration: underline overline;
 }
 
 a:hover {
   cursor: url('/cur/starclick.gif'), auto;
+  text-decoration: underline overline wavy;
 }
 
 .sidebar-img, .footer, .title, .links, .box {
