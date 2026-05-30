@@ -32,7 +32,7 @@ body {
   background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom aliceblue repeat-x;
   background-size: auto, auto 220px;
   image-rendering: pixelated;
-  margin-bottom: 10%;
+  margin-bottom: 20%;
   background-color: #141414;
 }
 

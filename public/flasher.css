@@ -28,10 +28,6 @@ img.new {
   border-radius: 0px !important;
 }
 
-a:hover {
-  cursor: url('/cur/starclick.gif'), auto;
-}
-
 .name {
   font-size: 26px;
   text-shadow: 0px 5px 10px #fff;
@@ -67,6 +63,10 @@ li::marker {
   margin: 0 auto;
 }
   
+.tabber {
+  text-align: left;
+}
+
 .tabber button {
   border-bottom: none !important;
   border: 1px black outset;
@@ -78,6 +78,14 @@ li::marker {
   color: white;
   font-family: MS PGothic, "Mona";
   font-size: 12px;
+}
+
+button:hover {
+  cursor: url('/cur/starclick.gif'), auto;
+}
+
+button:active {
+  border: 1px black inset;
 }
 
 .overview {
@@ -107,12 +115,8 @@ a:visited {
   color: #686868; 
 }
 
-button:active {
-  border: 1px black inset;
-}
-
-.tabber {
-  text-align: left;
+a:hover {
+  cursor: url('/cur/starclick.gif'), auto;
 }
 
 .sidebar-img, .footer, .title, .links, .box {
@@ -218,6 +222,7 @@ background-position-x: -450px;
   columns: 2;
   column-gap: 25px;
   }
+
 h1, h2, h3, h4, h5 {
   text-align: left;
   line-height: 2px;
