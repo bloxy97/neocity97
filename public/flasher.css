@@ -67,12 +67,14 @@ li::marker {
   text-align: left;
 }
 
-#t1 img:hover {
+#t1 a img:hover {
   animation: weir .5s;
 }
 
 @keyframes weir {
-  from {  transform: rotate3d(.5, 0.5, .5, 15deg);}
+  0% {  transform: rotate3d(.5, 0.5, .5, 15deg);}
+  50% {  transform: none;}
+  50% {  transform: rotate3d( -.5, 0.5, -.5, 15deg);}
 }
 
 .tabber button {
