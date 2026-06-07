@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitworse AA</title>
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <link href="./css/ayashii.css" rel="alternate stylesheet" type="text/css" title="Aya">
+  <script src="./script/styleswitch.js"></script>
+  <script src="./script/fontsize.js"></script>
+  <script src="./script/main.js"></script>
+  <link rel="icon" href="./img/fav.png" type="image/x-icon">
+  <style>
+    body {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="innerHeader">
+      <div id="topControls">
+        <form id="fontForm">
+          <span>Font Family:</span>
+          <label for="fontSmall">MS PGothic (2channel-Type)</label><input type="radio" name="fontChanger" id="fontSmall" onclick="PGothic()">
+          <label for="fontBig">MS Gothic (Ayashii World-Type)</label><input type="radio" name="fontChanger" id="fontBig" onclick="Gothic()">
+        </form>
+        <form id="switchform">
+          <label for="switchcontrol">Style:</label>
+          <select name="switchcontrol" id="switchcontrol" size="1" onchange="chooseStyle(this.options[this.selectedIndex].value, 365)">
+              <option value="none" selected="selected">2channel (Light)</option>
+              <option value="Aya">Ayashii World (Dark)</option>
+          </select>
+        </form>
+      </div>
+      <div id="title">
+        <h1>Bitworse AA <span class="aa">(´ω｀)</span></h1>
+        <nav class="links">
+          <a href="./index.html">AA editor</a>
+          ＊
+          <a href="https://github.com/bloxy97/bitworse-AA">Source</a>
+          ＊
+          <img src="./img/aabutton.gif">
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <dl>
+      <dt>2026/06/06</dt>
+      <dd>
+        <ul>
+          <li>Bitworse-AA releases in a servicable state.</li>
+          <li>I probably have to add and change more, but I'm not ready/don't know yet.</li>
+        </ul>
+      </dd>
+      <dt>2
+      <dt>2026/05/30</dt>
+      <dd>
+        <ul>
+          <li>I start working on Bitworse-AA.</li>
+          <li>Incidentally, this is also the 4 year anniversary of Mattari-AA.</li>
+        </ul>
+      </dd>
+      <dt>2022/05/30</dt>
+      <dd>
+        <ul>
+          <li>Mattari-AA releases!</li>
+          <li>Corrected "Mattari" mispelling on changelog page</li>
+          <li>Corrected Remix style's button hover color</li>
+        </ul>
+      </dd>
+      <dt>2022/05/08</dt>
+      <dd>
+        <ul>
+          <li>Work on Mattari-AA began.</li>
+        </ul>
+      </dd>
+    </dl>
+  </main>
+</body>
+</html>

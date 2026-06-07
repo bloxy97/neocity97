@@ -1,0 +1,449 @@
+:root {
+  --bg-main: #efefef;
+  --fg-main: #000;
+  --fg-alt: #CCFFCC;
+  --link: #0000ee;
+  --link-v: #551a8b;
+  --link-a: #ff0000;
+  --bg-box: #efefef;
+  --bg-box-transparent: #cfca;
+  --border-dark: #aaa;
+  --border-light: #ffffff;
+  --border-btn-dark: #aaa; /* omg like aa? */
+  --border-btn-light: #ffffff;
+  --bg-img: url("../img/dqn.gif");
+  --bg-img-write: url("../img/bg_main.png");
+  --bg-img-write-small: url("../img/bg_main_small.png");
+  --bg-button: #efefef;
+  --outline: #000000;
+}
+
+@font-face {
+  font-family: "IPAMonaGothic";
+  src: local("IPAMonaGothic"),
+    url("../fonts/IPAMonaGothic.woff2") format("woff2"),
+    url("../fonts/IPAMonaGothic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "IPAMonaPGothic";
+  src: local("IPAMonaPGothic"),
+    url("../fonts/IPAMonaPGothic.woff2") format("woff2"),
+    url("../fonts/IPAMonaPGothic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Saitamaar";
+  src: local("Satimaar"), /* why would you have this already? */
+    url("/fonts/Saitamaar.woff2") format("woff2"),
+    url("/fonts/Saitamaar.woff") format("woff");
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 1px solid var(--outline);
+}
+
+body {
+  background-image: var(--bg-img);
+  background-color: var(--bg-main);
+  color: var(--fg-main);
+  margin: 0;
+  padding: 0;
+  font-family:
+    "MS PGothic",
+    "Osaka",
+    "BIZ UDPGothic",
+    "IPAMonaPGothic",
+    sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.MSPGothic {
+  font-family: MS PGothic, "Saitamaar", "IPAMonaPGothic", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.MSPGothic #writeBox, .MSPGothic .selectionBox, .MSPGothic .selectionBoxWide {
+  font-family: MS PGothic, "Saitamaar", "IPAMonaPGothic", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--link-v);
+}
+
+a:active {
+  color: var(--link-a);
+}
+
+#mainContainer {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: auto auto 1fr;
+  gap: 8px;
+  grid-gap: 8px;
+  grid-template-areas:
+    "header header"
+    "pager write"
+    "selection write";
+  min-height: 100vh;
+  padding: 8px;
+}
+
+header {
+  grid-area: header;
+  
+}
+
+button {
+  border: 2px solid;
+  border-top-color: var(--border-btn-light);
+  border-left-color: var(--border-btn-light);
+  border-bottom-color: var(--border-btn-dark);
+  border-right-color: var(--border-btn-dark);
+  background-color: var(--bg-button);
+  color: var(--fg-main);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#innerHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+#topControls {
+  display: table;
+  margin-left: auto;
+}
+
+select {
+  background-color: var(--bg-button);
+  color: inherit;
+  border: 2px solid;
+  border-top-color: var(--border-btn-light);
+  border-left-color: var(--border-btn-light);
+  border-bottom-color: var(--border-dark);
+  border-right-color: var(--border-dark);
+  font: inherit;
+  padding: 2px 0;
+}
+
+select:focus {
+  outline: 1px solid var(--outline);
+}
+
+select:active {
+  background-color: var(--bg-box);
+  border: 2px solid;
+  border-top-color: var(--border-btn-dark);
+  border-left-color: var(--border-btn-dark);
+  border-bottom-color: var(--border-btn-light);
+  border-right-color: var(--border-btn-light);
+}
+
+#title {
+  display: table;
+  margin-right: auto;
+  margin-top: auto;
+  height: min-content;
+}
+
+h1 {
+  display: inline-block;
+  margin: 0;
+  font-size: 1em;
+}
+
+.aa {
+  font-family:
+    "MS Gothic",
+    "Osaka-Mono",
+    "BIZ UDGothic",
+    "IPAMonaGothic",
+    monospace;
+}
+
+.aa2 {
+  font-family: MS PGothic, "Satimaar", "IPAMonaPGothic", sans-serif;
+}
+
+.links {
+  display: inline-block;
+  margin: 0;
+}
+
+summary {
+  background-color: var(--fg-alt);
+  border: 1px outset;
+  outline: 1px inset;
+  outline-color: var(--border-light);
+  outline-offset: -6px;
+  border-top-color: var(--border-light);
+  border-left-color: var(--border-light);
+  border-bottom-color: var(--border-dark);
+  border-right-color: var(--border-dark);
+  padding: 4px 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.infoContent {
+  background-color: var(--bg-box-transparent);
+  border: 2px ridge var(--border-light);
+  border-top: none;
+  padding: 8px;
+}
+
+.infoContent:focus {
+  outline-color: var(--outline);
+}
+
+.infoContent ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.infoContent li {
+  padding-left: 1.25em;
+  text-indent: -1.25em;
+}
+
+.infoContent ul li:before {
+  content: "\2605";
+  /* color: var(--fg-alt); */
+  margin-right: 0.25em;
+}
+
+#pager,
+.selectionBox,
+.selectionBoxWide,
+#writeBox {
+  background-color: var(--bg-box);
+  color: var(--fg-main);
+  border: 3px outset;
+  border-top-color: var(--border-btn-light);
+  border-left-color: var(--border-btn-light);
+  border-bottom-color: var(--border-dark);
+  border-right-color: var(--border-dark);
+  font-family:
+    "MS Gothic",
+    "IPAMonaGothic",
+    "Osaka-Mono",
+    "BIZ UDGothic",
+    monospace;
+  font-size: inherit;
+  line-height: 1;
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+#pagerContainer {
+  grid-area: pager;
+  width: 150%;
+}
+
+#pager {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-rows: min-content;
+  padding: 3px;
+  margin-bottom: -45px;
+}
+
+.links img {
+  align-items: center;
+  margin-bottom: -10px;
+}
+
+.tablinks {
+  background-color: var(--bg-button);
+  color: var(--fg-main);
+  border: 1px solid;
+  border-top-color: var(--border-btn-light);
+  border-left-color: var(--border-btn-light);
+  border-bottom-color: var(--border-btn-dark);
+  border-right-color: var(--border-btn-dark);
+  padding: 0.5em;
+  width: auto;
+  height: fit-content;
+  font: inherit;
+  font-size: 0.8125em;
+  text-align: center;
+}
+
+.tablinks:hover {
+  background-color: var(--bg-main);
+}
+
+.tablinks.active {
+  background-color: var(--fg-main);
+  color: var(--bg-box);
+  border: 1px solid;
+  border-top-color: var(--border-btn-dark);
+  border-left-color: var(--border-btn-dark);
+  border-bottom-color: var(--border-btn-light);
+  border-right-color: var(--border-btn-light);
+}
+
+.tablinks:focus {
+  outline: 1px solid var(--outline);
+  outline-offset: -2px;
+}
+
+#selectionContainer {
+  grid-area: selection;
+  width: 150%;
+  margin-top: 45px;
+}
+
+#page1,
+#page2,
+#page3,
+#page4,
+#page5,
+#page6,
+#page7,
+#page8,
+#page9,
+#page10,
+#page11,
+#page12,
+#page13,
+#page14,
+#page15,
+#page16,
+#page17,
+#page18,
+#page19,
+#page20 {
+  width: 100%;
+  padding: 5px;
+  height: 700px;
+  overflow: scroll;
+}
+
+#page2,
+#page3,
+#page4,
+#page5,
+#page6,
+#page7,
+#page8,
+#page9,
+#page10,
+#page11,
+#page12,
+#page13,
+#page14,
+#page15,
+#page16,
+#page17,
+#page18,
+#page19,
+#page20 {
+  display: none;
+}
+
+.selectionBox {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-rows: min-content;
+}
+
+.selectionBoxWide {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: min-content;
+}
+
+.multiLine {
+  text-align: left;
+}
+
+.selectItem {
+  background-color: var(--bg-button);
+  color: inherit;
+  border: 2px solid;
+  border-top-color: var(--border-btn-light);
+  border-left-color: var(--border-btn-light);
+  border-bottom-color: var(--border-btn-dark);
+  border-right-color: var(--border-btn-dark);
+  padding: 0.25em;
+  width: 100%;
+  min-height: 1.75em;
+  white-space: pre;
+  overflow: hidden;
+  font: inherit;
+}
+
+.selectionBoxWide .selectItem {
+  text-overflow: ellipsis;
+}
+
+.selectItem:hover {
+  background-color: var(--bg-main);
+}
+
+.selectItem:active {
+  background-color: var(--bg-box);
+  border: 1px solid;
+  border-top-color: var(--border-btn-dark);
+  border-left-color: var(--border-btn-dark);
+  border-bottom-color: var(--border-btn-light);
+  border-right-color: var(--border-btn-light);
+}
+
+.selectItem:focus {
+  outline: 1px solid var(--outline);
+  outline-offset: -2px;
+}
+
+#writeContainer {
+  grid-area: write;
+  width: 1640px;
+  /*! align-content: end; */
+  /*! margin-right: 179px; */
+  margin-left: 3.5%;
+}
+
+#writeBox {
+  background-image: var(--bg-img-write);
+  background-repeat: repeat-y;
+  background-attachment: local;
+  resize: none;
+  white-space: pre;
+  overflow-wrap: normal;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+#writeBox:focus {
+  outline: 1px solid var(--outline);
+}

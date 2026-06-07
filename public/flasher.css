@@ -67,6 +67,14 @@ li::marker {
   text-align: left;
 }
 
+#t1 img:hover {
+  animation: weir .5s;
+}
+
+@keyframes weir {
+  from {  transform: rotate3d(.5, 0.5, .5, 15deg);}
+}
+
 .tabber button {
   border-bottom: none !important;
   border: 1px black outset;
@@ -113,12 +121,12 @@ a {
 }
 
 a:visited {
-  text-decoration: underline overline;
+   color: #afafaf;
 }
 
 a:hover {
   cursor: url('/cur/starclick.gif'), auto;
-  text-decoration: underline overline wavy;
+  text-decoration: underline overline;
 }
 
 .sidebar-img, .footer, .title, .links, .box {
