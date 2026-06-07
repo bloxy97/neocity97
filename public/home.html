@@ -8,6 +8,19 @@
     <link href="/flasher.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-style.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+			window.RufflePlayer = window.RufflePlayer || {};
+			window.RufflePlayer.config = {
+			"autoplay":"on",
+			"unmuteOverlay":"hidden",
+			"letterbox":"off",
+			"splashScreen":false,
+			"allowFullscreen": false,
+			"wmode":"opaque",
+			"allowScriptAccess": true
+            };
+    </script>
 </head>
 
 <body>
@@ -72,18 +85,30 @@
                     <div id="t2" class="content" style="display: none;">
                       <h2>Other People???????</h2>
                       <p>Well... it's more like webring. But theres gonna be more!!! I swear...</p>
+
                       <div id='apartment-webring' style="image-rendering: auto;">
                         <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-variables.js"></script>
                         <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-widget.js"></script>
                       </div> 
+
                       <div id='we_bring'>
                         <script type="text/javascript" src="https://brooklynights.nekoweb.org/we_bring/onionring-variables.js"></script>
                         <script type="text/javascript" src="https://brooklynights.nekoweb.org/we_bring/onionring-widget.js"></script>
                       </div>
+
+                      <script src=/fla/swfobject.js defer></script> <!-- swfobject is from https://github.com/swfobject/swfobject/blob/master/swfobject/swfobject.js! -->
+                    <script defer src=https://downloads.thepersonever.net/webring/flash/widgets.js></script>
+                        <div id="swfwrapper" style="width: 300px; height: 300px; overflow: hidden;">
+                            <div id=swfdiv>
+
+                            </div>
+                        </div>
+                    
                       <div id='gfdkris'> 
                         <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"></script>
                         <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"></script>
                       </div>
+
                       <p>Here's also some advertisements for other sites.</p>
                       <iframe width="150" height="450" style="border:none" src="https://dogspit.nekoweb.org/sidelink.html" name="sidelink"></iframe>
                       <iframe width="150" height="450" style="border:none" src="https://dogspit.nekoweb.org/sidelink.html" name="sidelink"></iframe>
