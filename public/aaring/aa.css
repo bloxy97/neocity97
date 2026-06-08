@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Mona";
+    src: url(../mona.woff);
+}
+
+body {
+    font-family: "Mona", monospace;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.aa {
+    font-family: "Mona", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.main {
+    border: 4px solid transparent; /* Required for border-image */
+    border-image: url(./dring2.png) 4 stretch;
+    width: 600px;
+    margin: auto;
+}
+
+button {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button::before {
+    content: "▶";
+    font-size: 20px;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+}
+
+.active::before {
+    content: "▼";
+    font-size: 16px;
+}
+
+.inner {
+    padding: 10px;
+    display: grid;
+    overflow: auto;
+    width: auto;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+h1, h2, h3, p {
+    margin: inherit;
+}
+
+.left {
+    text-align: left;
+}
