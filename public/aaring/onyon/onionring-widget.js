@@ -55,7 +55,7 @@ else {
   }
 
   //this is the code that displays the widget - EDIT THIS if you want to change the structure
-  tag.insertAdjacentHTML('afterbegin', `
+  document.getElementById(AAring).insertAdjacentHTML('afterbegin', `
   <table>
     <tr>
       <td class='webring-prev'><a href='${sites[previousIndex]}'>← previous</a></td>
