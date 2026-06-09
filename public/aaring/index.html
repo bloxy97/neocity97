@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>＼( ^o^ )／</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./aa.css">
+        <link rel="stylesheet" href="./onyon/onionring.css">
+	</head>
+	<body>
+        <div class="main">
+            <div class="inner">
+                <h2>Welcome to the AAring!</h2>
+                <p> A webring for fans of art made from ASCII, SHIFT_JIS, and anything in between!</p>
+                <p class="aa"> !!!!━━━(∀ﾟ )人(ﾟ∀ﾟ)人(ﾟ∀ﾟ)人( ﾟ∀)人(∀ﾟ )人(ﾟ∀ﾟ)人(ﾟ∀ﾟ)人( ﾟ∀)━━━!!!! </p>
+                    <span class="left">
+                        <button type="button" class="drop"><b>What is this?</b></button>
+                            <div class="content">
+                            <p>This is a webring dedicated to people interested in AA art, SHIFT_JIS art, kaomoji, and other topics that are loosely related. (Unicode (lol), 2channel Cats, and like. emojis i guess). That's all.</p>
+                            </div><br>
+                        
+                        <button type="button" class="drop"><b>What's a webring?</b></button>
+                            <div class="content">
+                            <p>ok so imagine if indie websites could spin in circles and hold hands and go "yayayayayayayayayaya!!!! ^_^" and we can all reach eachother in a chain （　´∀｀）</p>
+                            </div><br>
+                        
+                        <button type="button" class="drop"><b>What are the requirements?</b></button>
+                            <div class="content">
+                            <p>There isn't alot, but keep them in mind when you're submitting.</p>
+                            <ul>
+                                <li>Have a hand-coded website (No Carrds, website builders, and absolutely no AI.)</li>
+                                <li>Have some content (if your website is just a template or completely blank ill give you a grace period, but i'll remove you if you don't have anything after a while.)</li>
+                                <li>NO illegal/discriminatory/hateful content on your site. Don't. Please. </li>
+                                <li>If your site is NSFW/has shocking content, you gotta have a warning on your index/before said content.</li>
+                                <li>put the widget on your site ! we can only hold hands if you're willing to.</li>
+                            </ul>
+                            And thats it!
+                            </div><br>
+                        
+                        <button type="button" class="drop"><b>How can I join?</b></button>
+                            <div class="content">
+                            <p>It's simple! just <a href="mailto:webmasteroxy@gmail.com">email me</a> at webmasteroxy[at]gmail[dot]com with the following;</p>
+                            <ul>
+                                <li>Your site's name!</li>
+                                <li>A link to your site! (the page the webring will take people)</li>
+                                <li>A link to where you put the webring widget! (please have it there already)</li>
+                                <li> Your site tags! (see below)</li>
+                                <li>Your site button (optional!)</li>
+                                <li>A short description of your site!</li>
+                            </ul>
+                            </div>
+                    </span>
+                    <p class="aa"> !!!! *･゜ﾟ･*:━━━━━:*･゜⊂(‘∀‘)⊃゜･*:━━━━━:*･゜ﾟ･* !!!!</p>
+                    <br>
+                Here's what the widget looks like:<br>
+                    <div id='AAring'>
+                        <script type="text/javascript" src="./onyon/onionring-variables.js"></script>
+                        <script type="text/javascript" src="./onyon/onionring-widget.js"></script>
+                    </div>
+                <br>
+                    And here's the code for embedding it.
+                <br><br>
+                    <textarea readonly>
+<!-- put this in your <head> -->
+    <link rel="stylesheet" href="https://bloxy97.nekoweb.org/aaring/onyon/onionring.css">
+
+<!-- put this wherever you want the widget to be. -->
+    <div id='AAring'>
+        <script type="text/javascript" src="https://bloxy97.nekoweb.org/aaring/onyon/onionring-variables.js"></script>
+        <script type="text/javascript" src="https://bloxy97.nekoweb.org/aaring/onyon/onionring-widget.js"></script>
+    </div> 
+                    </textarea>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="inner">
+            <h2>INDEX</h2>
+            It... It's just me...
+            <h3>site tags:</h3>
+            <ul>
+                <li>（　´∀｀） - Mild - general tomfoolery, stuff that most people could handle. Light swearing, minimal flashing lights/moving things; basically stuff that only the most uptight of parents wouldn't like. <br> You can use this instead of the next two tags if their content has warnings beforehand.</li>
+                <li>&lt;丶｀∀´&gt; - Medium - bit higher on the Obscenity Scale™, heavier swearing, sensitive themes, and mild nudity.</li>
+                <li>&lt;丶´Д｀&gt; - Spicy - Nudity, gore, stuff that you wouldn't want your coworkers or parents to see.</li>
+                <li>（∞∀∞） - Sweet - flashing lights, constant movement. Things like that.</li>
+            </ul>
+                <div id='index'>
+                    <script type="text/javascript" src="./onyon/onionring-variables.js"></script>
+                    <script type="text/javascript" src="./onyon/onionring-index.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            webring powered by <a href="https://allium.house/garden/onionring/">onionring.js</a>. （　´∀｀）人
+        </div>
+        <script>
+            var coll = document.getElementsByClassName("drop");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                content.style.display = "block";
+                }
+            });
+            } 
+        </script>
+	</body>
+</html>

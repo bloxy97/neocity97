@@ -7,7 +7,32 @@
 
 //the full URLs of all the sites in the ring
 var sites = [
-'https://bloxy97.nekoweb.org/',
+'https://bloxy97.nekoweb.org/'
+];
+
+//they name
+var wname = [
+'Roxy'
+];
+
+//they button
+var sbutton = [
+    'https://bloxy97.nekoweb.org/images/button.gif'
+];
+
+//site name
+var sname = [
+'Action97'
+];
+
+//they tag
+var tags = [
+    `（　´∀｀）`
+];
+
+//they desc
+var desc = [
+'this is where i put all of my slop and sludge and endeavors. you might be here.'
 ];
 
 //the name of the ring
@@ -21,7 +46,7 @@ var ringID = 'AAring';
 //should the widget include a link to an index page?
 var useIndex = false;
 //the full URL of the index page. if you're not using one, you don't have to specify anything here
-var indexPage = 'https://bloxy97.nekoweb.org/ascii/';
+var indexPage = 'https://bloxy97.nekoweb.org/aaring/';
 
 //should the widget include a random button?
 var useRandom = true;

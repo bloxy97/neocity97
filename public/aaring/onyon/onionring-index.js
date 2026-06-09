@@ -8,13 +8,30 @@
 var tag = document.getElementById('index');
 regex = /^https:\/\/|\/$/g; //strips the https:// and trailing slash off the urls for aesthetic purposes
 
-list = "";
+
+
+table = "";
 for (i = 0; i < sites.length; i++) {
-  list += `<li><a href='${sites[i]}'>${sites[i].replace(regex, "")}</a></li>`;
+  
+  table += `
+  <tr>
+  <td><a href='${sites[i]}'>${sname[i].replace(regex, "")}</a><br><br>${tags[i].replace(regex, "")}</td>
+  <td>${wname[i].replace(regex, "")}</td>
+  <td><img src='${sbutton[i]}' alt='${wname[i]}&apos;s site button (i hope).'></td>
+  <td>${desc[i].replace(regex, "")}</td>
+  </tr>
+  `;
+  
 }
 
 tag.insertAdjacentHTML('afterbegin', `
-<ul>
-${list}
-</ul>
+<table>
+  <tr>
+    <th>Website</th>
+    <th>Webmaster</th>
+    <th>Site Button</th>
+    <th>Desc</th>
+  </tr>
+${table}
+</table>
 `);

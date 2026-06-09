@@ -5,32 +5,80 @@
 /* === ONIONRING.CSS === */
 /* this file affects the style of the widget. remember to replace all instances of #AAring with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
 
-#AAring {
-  margin: 0 auto;
-  padding: 15px; /* creates some space around the widget */
+@font-face {
+    font-family: "Mona";
+    src: url(../mona.woff);
 }
+
+#AAring .inner {
+  padding: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#AAring {
+  padding: 5px; /* creates some space around the widget */
+  width: 150px;
+  height: 90%;
+  border: 1px black solid;
+  outline: 1px black solid;
+  outline-offset: -4px;
+  text-align: center;
+  margin: 0 30%;
+  font-family: "Mona", monospace;
+  font-size: 16px;
+  line-height: 18px;
+  background: #fff ;
+  color: black;
+}
+
+#AAring
 
 #AAring table {
   background-color: #ffffff; /* makes the background pure white */
   margin: 0 auto; /* centers the widget */
+  width: 140px;
 }
 
 #AAring table tr td {
-  padding: 15px; /* creates some space between the links and text inside the widget */
+  padding: 0; /* creates some space between the links and text inside the widget */
+  /*! text-align: left; */
 }
 
 #AAring .webring-prev {
-  text-align:right;
-}
-
-#AAring .webring-info {
-   text-align:center;
+  text-align:left;
+  padding: 0px;
 }
 
 #AAring .webring-next {
-  text-align:left;
+  text-align: right;
 }
 
 #AAring .webring-links {
-  font-size:small;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+#AAring h3 {
+  text-align: center;
+}
+
+#AAring .ascii {
+  text-align: left;
+  display: block;
+  width: 75px;
+  margin-left: 32%;
+  margin-top: 5px;
+}
+
+#AAring .ascii {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+
+#AAring .ascii:visited {
+  color: inherit;
+  text-decoration: inherit;
 }
