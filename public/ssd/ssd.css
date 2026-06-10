@@ -84,11 +84,11 @@ a:visited {
 }
 
 .glack:active img {
-  animation: pressbk 0.5s;
+  animation: pressbk 50s;
 }
 
 .borward:active img {
-  animation: pressfr 0.5s;
+  animation: pressfr 50s;
 }
 
 @keyframes pressfr {
