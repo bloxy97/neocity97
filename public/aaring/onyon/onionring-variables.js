@@ -7,12 +7,12 @@
 
 //the full URLs of all the sites in the ring
 var sites = [
-'https://bloxy97.nekoweb.org/'
+    'https://bloxy97.nekoweb.org/'
 ];
 
 //they name
 var wname = [
-'Roxy'
+    'Roxy'
 ];
 
 //they button
@@ -22,7 +22,7 @@ var sbutton = [
 
 //site name
 var sname = [
-'Action97'
+    'Action97'
 ];
 
 //they tag
