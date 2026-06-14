@@ -1,3 +1,13 @@
+//set first panel 
+let panelNumber = 1;
+
+//set file path chunks
+const start = `/ssd/img/${folder}/panel`
+const end = '.png'
+
+//set imgs for forward/back
+const fw = document.getElementById('forward');
+const bk = document.getElementById('back');
 
 //reload panel
 function setPanel() {

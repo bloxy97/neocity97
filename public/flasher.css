@@ -164,6 +164,18 @@ hr {
   line-height: 8px;
 }
 
+.lastfm a {
+  color: #383838;
+}
+
+.ringo {
+  position: relative;
+  right: -240px;
+  display: block;
+  height: 0px !important;
+  bottom: 205px;
+}
+
 /* border?
 
 .inner 
