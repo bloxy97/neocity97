@@ -7,6 +7,12 @@
   
 }
 
+#ruffle {
+  border: 1px solid black;
+  outline: 1px solid;
+  outline-offset: 3px;
+}
+
 .giko {
   max-width: fit-content;
   margin-left: auto;
