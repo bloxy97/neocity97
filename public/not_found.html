@@ -8,10 +8,29 @@
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <link href="/onigiri.css" rel="stylesheet" type="text/css" media="all">
+    <script src='/fla/ruffle.js'></script>
   </head>
   <body style="background: white">
     <div class="giko">
- <a href="./home"><img src="/dance.gif"></a>
- </div>
+      <div id='ruffle'></div>
+    </div>
+
+    <script>
+      var swfobject = {};
+
+      swfobject.embedSWF = function(url, cont, width, height){
+          var ruffle = window.RufflePlayer.newest(),
+              player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+                  width: width,
+                  height: height,
+                  style: 'width: ' + width + 'px; height: ' + height + 'px',
+              });
+          
+          player.load({ url: url });
+      }
+
+      swfobject.embedSWF('./404.swf', 'ruffle', 550, 400);
+    </script>
+
   </body>
 </html>
