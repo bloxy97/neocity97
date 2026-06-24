@@ -6,7 +6,7 @@
 /* this file affects the style of the widget. remember to replace all instances of #AAring with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
 
 #AAring * {
-    all: initial;
+ /*    all: initial; */
 }
 
 @font-face {
