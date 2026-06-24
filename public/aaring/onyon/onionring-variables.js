@@ -7,32 +7,38 @@
 
 //the full URLs of all the sites in the ring
 var sites = [
-    'https://bloxy97.nekoweb.org/'
+    'https://bloxy97.nekoweb.org/',
+    'https://mylilarea.nekoweb.org/'
 ];
 
 //they name
 var wname = [
-    'Roxy'
+    'Roxy',
+    'Kitsune'
 ];
 
 //they button
 var sbutton = [
-    'https://bloxy97.nekoweb.org/images/button.gif'
+    'https://bloxy97.nekoweb.org/images/button.gif',
+    'https://mylilarea.nekoweb.org/MyLilAreaButton.jpeg'
 ];
 
 //site name
 var sname = [
-    'Action97'
+    'Action97',
+    'My Lil Area'
 ];
 
 //they tag
 var tags = [
+    `（　´∀｀）`,
     `（　´∀｀）`
 ];
 
 //they desc
 var desc = [
-'this is where i put all of my slop and sludge and endeavors. you might be here.'
+'this is where i put all of my slop and sludge and endeavors. you might be here.',
+'aero :)'
 ];
 
 //the name of the ring
