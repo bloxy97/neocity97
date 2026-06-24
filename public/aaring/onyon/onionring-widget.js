@@ -70,7 +70,7 @@ else {
     <td class='webring-prev'><a href='${sites[previousIndex]}'>back</a> |</td>    
     <td>
       <span class='webring-links'>
-        
+        ${randomText}
       </span>
       </td>
       <td class='webring-next'>| <a href='${sites[nextIndex]}'>next</a></td>
