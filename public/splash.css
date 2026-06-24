@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'MS PGothic';
-  src: url(/msgoth.woff2)
+  src: url(/misc/msgoth.woff2)
   }
 
 .text{
@@ -28,7 +28,7 @@
 
 body {
   background: url("/images/cloudstile.png") repeat;
-  cursor: url('/cur/star.gif'), auto;
+  cursor: url('/misc/star.gif'), auto;
   background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom aliceblue repeat-x;
   background-size: auto, auto 220px;
   image-rendering: pixelated;
@@ -37,7 +37,7 @@ body {
 }
 
 a:hover {
-  cursor: url('/cur/starclick.gif'), auto;
+  cursor: url('/misc/starclick.gif'), auto;
 }
 .orbs {
   position: relative;

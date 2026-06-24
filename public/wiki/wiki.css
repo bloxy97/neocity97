@@ -3,7 +3,7 @@ body {
   font-size: 15px;
   background: #031200 url("/wiki/img/starbo.png") repeat; /*Replace with your own background*/
 	color: #101000;
-  cursor: url('/cur/star.gif'), auto;
+  cursor: url('/misc/star.gif'), auto;
 }
 
 	img {
@@ -21,7 +21,7 @@ a:visited {
   }
   a:hover {
      text-decoration: underline;
-     cursor: url('/cur/starclick.gif'), auto;
+     cursor: url('/misc/starclick.gif'), auto;
   }
 
 /*Main text section*/

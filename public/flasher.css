@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Mona';
-  src: url(/mona.woff)
+  src: url(/misc/mona.woff)
   }
 
 body {
@@ -14,7 +14,7 @@ body {
   background-size: auto, auto 220px;
   image-rendering: pixelated;
   background-color: #141414;
-  cursor: url('/cur/star.gif'), auto;
+  cursor: url('/misc/star.gif'), auto;
   margin-bottom: 150px;
   }
 
@@ -91,7 +91,7 @@ li::marker {
 }
 
 button:hover {
-  cursor: url('/cur/starclick.gif'), auto;
+  cursor: url('/misc/starclick.gif'), auto;
 }
 
 button:active {
@@ -127,7 +127,7 @@ a:visited {
 }
 
 a:hover {
-  cursor: url('/cur/starclick.gif'), auto;
+  cursor: url('/misc/starclick.gif'), auto;
   text-decoration: underline overline;
 }
 

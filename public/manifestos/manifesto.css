@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'MS PGothic';
-  src: url(/msgoth.woff2)
+  src: url(/misc/msgoth.woff2)
   }
 
 body {
@@ -11,12 +11,12 @@ body {
   animation: none;
   background-size: cover;
   image-rendering: crisp-edges;
-  cursor: url('/cur/star.gif'), auto;
+  cursor: url('/misc/star.gif'), auto;
 }
 
 a:hover {
   text-decoration: underline;
-  cursor: url('/cur/starclick.gif'), auto;
+  cursor: url('/misc/starclick.gif'), auto;
 }
 a:link {
   text-decoration: none;
