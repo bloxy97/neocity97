@@ -18,6 +18,20 @@ body {
   margin-bottom: 150px;
   }
 
+.fish {
+  display: flex;
+  float: right;
+}
+
+.fish img {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.fish img:hover {
+  cursor: url('/misc/starclick.gif'), auto;
+}
+
 img.new {
   width: auto !important;
   height: auto !important;
