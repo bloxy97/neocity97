@@ -185,7 +185,7 @@ hr {
 .ringo {
   position: relative;
   right: -240px;
-  display: block;
+  display: none;
   height: 0px !important;
   bottom: 205px;
 }
