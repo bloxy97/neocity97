@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#808080">
+    <meta property="og:title" content="From headlines to bedlines, schoolrooms to pool rooms...">
+    <meta name="description" content="add a 'f' before 'art'. RELAX liberals, it's called DARK HUMOR.">
+    <meta property="og:description" content="add a 'f' before 'art'. RELAX liberals, it's called DARK HUMOR.">
+    <meta property="og:image" content="./images/artlink.png">
+
+    <title>From headlines to bedlines, schoolrooms to pool rooms...</title>
+    <!-- The style.css file allows you to- I don't even care anymore. Shut up. Shut the f -->
+    <link href="/flasher.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <style>
+
+        .title .box {
+            background: url("/images/infoban.png"); 
+        }
+
+        .scroll {
+            display: flex;
+            border: 3px outset #FFF !important;
+            background: #EFEFEF !important;
+            color: #000;
+            margin: 0 3px;
+            padding: 10px;
+            overflow: scroll;
+        }
+
+        .panel {
+            border: 1px outset #fff;
+            display: contents;
+            padding: 5px;
+        }
+
+        .panel img {
+            width: 100px;
+            border: 1px inset  #fff;
+            padding: 0px;
+            margin: auto 3px;
+            background: #efefef;
+        }
+
+        .art {
+            text-align: center;
+        }
+
+        .art img {
+            text-align: center;
+            width: auto;
+            max-width: 700px;
+            margin: 10px;
+            border: 1px inset  #fff;
+            background: #efefef;
+        }
+
+        .artdesc {
+            border: 1px inset  #fff;
+            background: #efefef;
+            color: black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .artdesc a {
+            color: #0000EE;
+        }
+
+        .artdesc a:visited {
+            color: #551a8b;
+        }
+
+    </style>
+</head>
+
+<body>
+    <audio loop="" id="musick"><source src="/misc/fart.mp3" type="audio/mp3">  get audio LOSER!!!!!!!!!!!!! ahahahahah</audio>
+    <span id="top"></span>
+    <div class="wrapper">
+        <div class="fish"><img id="fish" onclick="toggleAudio()" src="/misc/crabydislike.png"></div>
+        <div class="sidebar">
+            <a href="/home" class="sidebar-image">
+            </a>
+            <p class="name">bloxy97.nekoweb.org</p>
+            <div class="box">
+                <div class="inner">
+                    <p>
+                        <a href="https://bsky.app/profile/bloxy97.nekoweb.org"><img src="./images/bskylogo.png"></a>
+                        <a href="https://napoleonite.space/bloxy97"><img src="./images/napologo.png"></a>
+                        <a href="https://www.tumblr.com/bloxxinator97"><img src="./images/tumblrlogo.png"></a>
+                        <a href="https://www.crosstalk.im/profile/+bloxy97"><img src="./images/msnlogo.png"></a>
+                        <a href="/contact.html"><img src="./images/emaillogo.png"></a>
+                    </p>
+                    <p>
+                        <!-- FC2 Counter  Starts here -->
+                         <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40225590&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40225590&main=1" /></noscript>
+                        <!-- FC2 Counter  Ends here -->
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="bar">
+                        <div class="link-title"><a href="/banner.html">Banneroom<img src="./images/bannerlink.png"></a></div>
+                        <hr>
+                        <div class="link-title"><a href="/art.html">Art(s)<img src="./images/artlink.png"></a></div>
+                        <hr>
+                        <div class="link-title"><a href="/about.html">The Webmaster<img src="./images/aboutlink.png"></a></div>
+                        <hr>
+                        <div class="link-title"><a href="./projects.html">Projects<img src="./images/prolink.png"></a></div>
+                        <hr>
+                        <div class="link-title"><a href="./aaring/">My webring!<img src="./images/AAlink.png"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="title">
+                <div class="box">
+                    <div class="title-text">
+                        art
+                    </div>
+                    <div class="tabber">
+                        <button class="tab" onclick="openTab('t1')">Art</button>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div id="t1" class="content" style="display: block;">
+                        <div id="scroll" class="scroll" onload="gallery()">
+
+                        </div>
+
+                        <div class="art">
+                            <img id="art" src="./images/miracle.gif">
+                        </div>
+
+                        <div id="desc" class="artdesc">
+                            click a image and you can see it in full and my fun commentary.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer">
+                    With love, &lt;97&gt; 
+                    <a href="#top"><img src="images/back.gif"></a>
+                </div>
+            </div>
+
+            <script>
+                const png = document.getElementById('art');
+                const desc = document.getElementById('desc');
+                const scroller = document.getElementById('scroll');
+
+                const art = [
+                    'starvoxref.png',
+                    'pixhazeref.png',
+                    'infotanref.png',
+                    'retro.png',
+                    'angle.png',
+                    'angleorna.png',
+                    'bazinga.png',
+                    'book.png',
+                    '2ch.png',
+                    '2chmain.png',
+                    'giko.gif',
+                    'gikoshii.png',
+                    'kitar.png',
+                    'piss.png',
+                    'mayro.png',
+                    'sun.png',
+                    'banna.png',
+                    'nakaza2.png',
+                    'lave2.png',
+                    'tetoretro.png',
+                    'commentary.png',
+                    'discipline.png',
+                    'yurei.png',
+                    'bulletcat.png'
+                ]
+
+                const artdesc = [
+                    'sheet for starvox.',
+                    'sheet for pizhaze.',
+                    'sheet for infotan.',
+                    'so retro (made in flash 8)',
+                    'infotan but shes angelic or something',
+                    'ditto but slightly different',
+                    'art featuring character from @wheniwatertheroses.bsky.social',
+                    'atabook art',
+                    '2channel art',
+                    'this is how i draw the main 4 of 2 channel',
+                    'slightly animated giko (made in flash 8)',
+                    'giko shii and mona would be there too shimejis. download is <a href="https://files.catbox.moe/kbt1hu.zip">here.</a>',
+                    'kita',
+                    'tsuu art. also the origin of pissbuncle. we love pissbuncle',
+                    'he gives me unexplainable power',
+                    'art of a character by @sunn8654',
+                    'i dont remember where i was gonna use this',
+                    'nakaza.',
+                    'lave girl',
+                    'teto but so retro',
+                    'important political commentary',
+                    'stupid',
+                    'yurei for a potato (a potato is when my group of friends pass a single image around and draw/make characters based on a theme. this was a halloweentato.)',
+                    'bullet train cat gijinka'
+                ]
+
+                //set file path chunks
+                const start = `./images/art/`
+
+                let ids = art.length;
+
+                //create previews
+                for (let i = 0; i < ids; i++) {
+
+                    scroller.insertAdjacentHTML('beforeEnd', `
+                            <div class="panel">
+                                <img onclick="setPanel(${i})" src="./images/art/${art[i]}">
+                            </div>
+                    `);
+
+                    if (i > ids) {
+                        break; //kill the loop when we don't need it
+                    } 
+                }
+
+                function setPanel(id) {
+                    png.src = start.concat(art[id]);
+                    desc.innerHTML = artdesc[id]
+                }
+            </script>
+
+            <script type="text/javascript" src="./js/tabber.js"></script>
+            <script type="text/javascript" src="./js/music.js"></script>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: MS PGothic, "Mona";
   color: #fff;
-  background: gray;
+  background: #808080;
   background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x;
   background-size: auto, auto 220px;
   image-rendering: pixelated;
@@ -91,6 +91,38 @@ li::marker {
   50% { transform: scaleY(0.75);}
   75% { transform: skewX(-10deg); }
   100% {transform: scaleY(0.75);}
+}
+
+.norm {
+  display: flex;
+  border: 1px outset #FFF !important;
+  outline: 1px inset #FFF; 
+  outline-offset: -6px;
+  background: #EFEFEF !important;
+  color: #000;
+  margin: 0 3px;
+}
+
+.desc img {
+  margin: 5px;
+} 
+
+.picture, .desc {
+  margin: 5px;
+}
+
+.desc {
+  border: 1px inset #fff;
+  margin: 10px;
+  padding: 5px;
+  height: 290px;
+}
+
+.picture {
+ margin: 10px;
+ border: 1px inset #fff;
+ aspect-ratio: 1/1;
+ height: 300px;
 }
 
 .tabber button {
@@ -266,6 +298,7 @@ background-position-x: -450px;
 h1, h2, h3, h4, h5 {
   text-align: left;
   line-height: 2px;
+  margin: 5px 0;
 }
   
 .title .box {
