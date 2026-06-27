@@ -5,10 +5,10 @@
   }
 
 body {
-  background: url(/ssd/img/mono.png) #000000;
+  background: url(/ssd/img/mono.png) #fff;
   font-family: "MS PGothic", "Mona", "Tahoma", "Noto Sans Japanese", sans-serif;
   font-size: 18px;  
-  background-position: top right;
+  background-position: bottom right;
   image-rendering: pixelated;
   cursor: url('/misc/star.gif'), auto;
   background-size: contain;
@@ -35,6 +35,11 @@ body {
 
 .sidebar {
   width: 0px;
+  }
+
+  .coverart {
+    position: relative;
+
   }
 
 .main {

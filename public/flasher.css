@@ -103,9 +103,21 @@ li::marker {
   margin: 0 3px;
 }
 
+.norm a {
+  color: #0000EE;
+}
+
+.norm a:visited {
+  color: revert;
+}
+
 .desc img {
   margin: 5px;
 } 
+
+dd {
+  padding: 15px 0;
+}
 
 .picture, .desc {
   margin: 5px;
@@ -116,6 +128,8 @@ li::marker {
   margin: 10px;
   padding: 5px;
   height: 290px;
+  overflow-y: scroll;
+  text-overflow: auto;
 }
 
 .picture {
