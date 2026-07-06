@@ -6,4 +6,12 @@ function openTab(tabs) {
     }
     document.getElementById(tabs).style.display = "block";
 }
+
+function syobonRandomize() {
+    const bg = document.getElementById("syobon")
+    const rand = Math.floor(Math.random() * 3991)
+
+    bg.style.backgroundPositionX = rand.toString().concat('px');
+}
+
 //you are the shortest js ever

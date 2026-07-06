@@ -10,7 +10,8 @@
     <link href="\splash.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" type="image/x-icon" href="./images/ico.gif">
   </head>
-  <body>
+  <body onload="syobonRandomize()" id="syobon">
+  <audio loop="" id="musick"><source src="/misc/puyo.mp3" type="audio/mp3">  get audio LOSER!!!!!!!!!!!!! ahahahahah</audio>
     <div class="splash">
    <div class="text">
     <p>welcome! you should probably read this</p>
@@ -26,10 +27,12 @@
     <p></p>
    </div>
    <div class="orbs">
+    <div class="fish"><img id="fish" onclick="toggleAudio()" src="/misc/carbydislike.png"></div>
     <a href="https://www.mabsland.com/Adoption.html"><img src="./misc/14.gif"></a>
     <a href="home.html"><img src="images/welcomegirlie.png"></a>
     <a href="javascript:history.back()"><img src="images/byebye.png"></a>
    </div>
    </div>
+   <script type="text/javascript" src="./js/music.js"></script>
 </body>
 </html>

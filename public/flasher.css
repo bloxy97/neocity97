@@ -10,13 +10,17 @@ body {
   font-family: MS PGothic, "Mona";
   color: #fff;
   background: #808080;
-  background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x;
+  background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x, linear-gradient(to bottom, #232323, #000);
   background-size: auto, auto 220px;
   image-rendering: pixelated;
-  background-color: #141414;
   cursor: url('/misc/star.gif'), auto;
   margin-bottom: 150px;
   }
+
+@keyframes movex {
+  from { background-position: 0 inherit; }
+  to   { background-position: 100% 200px; }
+}
 
 .fish {
   display: flex;
@@ -56,20 +60,23 @@ li::marker {
 }
 
 .link-title img {
-  margin: 5px 0;
-  border: 2px black solid;
-  margin-left: -5px;
   width: 200px;
-  height: 100px;
-  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: -3px;
+  border: 1px solid black;
+  margin-left: -2px;
 }
 
 .bar img:hover {
-  filter: brightness(125%);
+  filter: blur(1px);
 }
 
 .bar img:active {
-  filter: brightness(75%);
+  filter: blur(3px);
+}
+
+.bar {
+  margin: 5px -10px;
 }
   
 .wrapper {
@@ -220,10 +227,26 @@ hr {
   border: 1px solid black;
   padding: 0.5em 1em;
   background: linear-gradient(to bottom, #606060, #383838) repeat-x;
+  
   }
+
+@keyframes movexy {
+  from { background-position: 0 0; }
+  to   { background-position: 66% 66%; }
+}
+
+@keyframes movex {
+  from { background-position: 0 inherit; }
+  to   { background-position: 450px 200px; }
+}
   
 .link-title {
-  line-height: 8px;
+  border: 1px black solid;
+  padding: 5px 5px;
+  background: url(./images/stars2.gif), linear-gradient(to bottom, #606060, #383838);
+  background-size: 64px;
+  align-content: center;
+  animation: movexy 20s linear infinite;
 }
 
 .lastfm a {
@@ -300,8 +323,9 @@ background-position-x: -450px;
   margin-left: 240px;
   border: black solid 1px;
   margin-top: 50px;
-  background: url("/images/bgmain.png") #383838 repeat-x;
-  background-position-y: 169px;
+  background: url("/images/bgmain.png") repeat-x, linear-gradient(to bottom, #383838, #323232);
+  background-position-y: 200px;
+  animation: movex 20s linear infinite;
   }
   
 .main {
@@ -311,7 +335,6 @@ background-position-x: -450px;
 
 h1, h2, h3, h4, h5 {
   text-align: left;
-  line-height: 2px;
   margin: 5px 0;
 }
   
@@ -341,6 +364,9 @@ h1, h2, h3, h4, h5 {
   border-top: 1px black solid;
   padding: 0px;
   padding-bottom: 10px;
+  background: url(./images/mariomario.png) no-repeat;
+  background-size: 72px;
+  background-position-y: 10px;
   }
   
 @media(max-width:915px) {

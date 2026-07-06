@@ -51,10 +51,11 @@
         .art img {
             text-align: center;
             width: auto;
-            max-width: 700px;
+            max-width: 25em;
             margin: 10px;
             border: 1px inset  #fff;
             background: #efefef;
+            padding: 3px;
         }
 
         .artdesc {
@@ -76,7 +77,7 @@
     </style>
 </head>
 
-<body>
+<body onload="syobonRandomize()" id="syobon">
     <audio loop="" id="musick"><source src="/misc/fart.mp3" type="audio/mp3">  get audio LOSER!!!!!!!!!!!!! ahahahahah</audio>
     <span id="top"></span>
     <div class="wrapper">
@@ -160,6 +161,7 @@
                     'pixhazeref.png',
                     'infotanref.png',
                     'summersmall.png',
+                    'cover.png',
                     'retro.png',
                     'angle.png',
                     'angleorna.png',
@@ -176,13 +178,15 @@
                     'banna.png',
                     'nakaza2.png',
                     'lave2.png',
+                    'fnafreal.png',
+                    'yurei.png',
+                    'cereal.png',
                     'tetoretro.png',
                     'commentary.png',
                     'discipline.png',
-                    'yurei.png',
                     'bulletcat.png',
-                    'cereal.png',
-                    'flowery.png'
+                    'flowery.png',
+                    'sunsetter.png'
                 ]
 
                 const artdesc = [
@@ -191,14 +195,15 @@
                     'sheet for pizhaze.',
                     'sheet for infotan.',
                     'summer ver',
-                    'so retro (made in flash 8)',
+                    'their render(?) promo art(?) for SSD.',
+                    'so retro',
                     'infotan but shes angelic or something',
                     'ditto but slightly different',
                     'art featuring character from @wheniwatertheroses.bsky.social',
                     'atabook art',
                     '2channel art',
                     'this is how i draw the main 4 of 2 channel',
-                    'slightly animated giko (made in flash 8)',
+                    'slightly animated giko',
                     'giko shii and mona would be there too shimejis. download is <a href="https://files.catbox.moe/kbt1hu.zip">here.</a>',
                     'kita',
                     'tsuu art. also the origin of pissbuncle. we love pissbuncle',
@@ -207,13 +212,15 @@
                     'i dont remember where i was gonna use this',
                     'nakaza.',
                     'lave girl',
+                    'stupid firefox twink thing. i think i have romantical feelings for him oops',
+                    'yurei for a potato (a potato is when my group of friends pass a single image around and draw/make characters based on a theme. this was a halloweentato.)',
+                    'cereal mascot. no-one is really sure what happened....',
                     'teto but so retro',
                     'important political commentary',
                     'stupid',
-                    'yurei for a potato (a potato is when my group of friends pass a single image around and draw/make characters based on a theme. this was a halloweentato.)',
                     'bullet train cat gijinka',
-                    'cereal mascot. no-one is really sure what happened....',
-                    'i hate him so much'
+                    'i hate him so much',
+                    '<a href="https://artfight.net/attack/13771558.sunsetter">artfight attack for salithin</a>.'
                 ]
 
                 //set file path chunks

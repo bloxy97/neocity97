@@ -16,6 +16,10 @@
   align-content: center;
   padding-top: 25%;
 }
+
+.fish {
+  display: contents;
+}
  
 .splash {
   position: relative;
