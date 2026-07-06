@@ -14,4 +14,5 @@ function syobonRandomize() {
     bg.style.backgroundPositionX = rand.toString().concat('px');
 }
 
+syobonRandomize()
 //you are the shortest js ever
