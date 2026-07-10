@@ -2,12 +2,17 @@
 
 @font-face {
   font-family: 'Mona';
-  src: url(/misc/mona.woff)
+  src: url(./misc/mona.woff)
+  }
+
+@font-face {
+  font-family: 'MS Gothic';
+  src: url(./misc/msgothic.woff2)
   }
 
 body {
   margin: 0;
-  font-family: MS PGothic, "Mona";
+  font-family: 'Mona', MS PGothic, "MS Gothic";
   color: #fff;
   background: #808080;
   background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x, linear-gradient(to bottom, #232323, #000);
