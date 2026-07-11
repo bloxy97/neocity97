@@ -1,3 +1,7 @@
+
+//get body for key detection
+const keys = document.getElementById("main");
+
 //set first panel 
 let panelNumber = 1;
 
@@ -8,6 +12,17 @@ const end = '.png'
 //set imgs for forward/back
 const fw = document.getElementById('forward');
 const bk = document.getElementById('back');
+
+
+//address them
+keys.addEventListener("keydown", function (event) {
+     if (event.code === "ArrowLeft") {
+        back()
+     };
+    if (event.code === "ArrowRight") {
+        forward()
+     }
+});
 
 //reload panel
 function setPanel() {
