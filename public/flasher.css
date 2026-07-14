@@ -6,7 +6,7 @@
   }
 
 @font-face {
-  font-family: 'MS Gothic';
+  font-family: "MS Gothic";
   src: url(./misc/msgothic.woff2)
   }
 
@@ -20,6 +20,8 @@ body {
   image-rendering: pixelated;
   cursor: url('/misc/star.gif'), auto;
   margin-bottom: 150px;
+  font-size: 16px;
+  line-height: 18px;
   }
 
 @keyframes movex {
@@ -160,7 +162,7 @@ dd {
   margin-bottom: -10px;
   z-index: 999;
   color: white;
-  font-family: MS PGothic, "Mona";
+  font-family: 'Mona', MS PGothic, "MS Gothic";
   font-size: 12px;
 }
 
