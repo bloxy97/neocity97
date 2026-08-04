@@ -9,42 +9,48 @@
 var sites = [
     'https://bloxy97.nekoweb.org/',
     'https://mylilarea.nekoweb.org/',
-    'https://hal.nekoweb.org/'
+    'https://hal.nekoweb.org/',
+    'https://ay-3-8910-online.w10.site/'
 ];
 
 //they name
 var wname = [
     'Roxy',
     'Kitsune',
-    'Hal'
+    'Hal',
+    'AY'
 ];
 
 //they button
 var sbutton = [
     'https://bloxy97.nekoweb.org/images/button.gif',
     'https://mylilarea.nekoweb.org/MyLilAreaButton.jpeg',
-    'https://hal.nekoweb.org/sitebutton.png'
+    'https://hal.nekoweb.org/sitebutton.png',
+    'https://files.catbox.moe/l3g0r4.png'
 ];
 
 //site name
 var sname = [
     'Action97',
     'My Lil Area',
-    'HAL'
+    'HAL',
+    `AY's site`
 ];
 
 //they tag
 var tags = [
     `（　´∀｀）`,
     `（　´∀｀）`,
-    `（　´∀｀）`
+    `（　´∀｀）`,
+    ``
 ];
 
 //they desc
 var desc = [
 'this is where i put all of my slop and sludge and endeavors. you might be here.',
 'aero :)',
-`A comprehensive personal blog (that's more like a wiki in reality)`
+`A comprehensive personal blog (that's more like a wiki in reality)`,
+'A random site where I put my stuff I guess'
 ];
 
 //the name of the ring
