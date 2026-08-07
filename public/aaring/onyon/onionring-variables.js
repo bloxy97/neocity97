@@ -10,7 +10,8 @@ var sites = [
     'https://bloxy97.nekoweb.org/',
     'https://mylilarea.nekoweb.org/',
     'https://hal.nekoweb.org/',
-    'https://ay-3-8910-online.w10.site/'
+    'https://ay-3-8910-online.w10.site/',
+    'https://nagisako.neocities.org'
 ];
 
 //they name
@@ -18,7 +19,8 @@ var wname = [
     'Roxy',
     'Kitsune',
     'Hal',
-    'AY'
+    'AY',
+    'dethunikorn'
 ];
 
 //they button
@@ -26,7 +28,8 @@ var sbutton = [
     'https://bloxy97.nekoweb.org/images/button.gif',
     'https://mylilarea.nekoweb.org/MyLilAreaButton.jpeg',
     'https://hal.nekoweb.org/sitebutton.png',
-    'https://files.catbox.moe/l3g0r4.png'
+    'https://files.catbox.moe/l3g0r4.png',
+    'https://nagisako.neocities.org/images/buttons/taskbar/blonde%20moment.jpg'
 ];
 
 //site name
@@ -34,7 +37,8 @@ var sname = [
     'Action97',
     'My Lil Area',
     'HAL',
-    `AY's site`
+    `AY's site`,
+    'nagisako'
 ];
 
 //they tag
@@ -42,7 +46,8 @@ var tags = [
     `（　´∀｀）`,
     `（　´∀｀）`,
     `（　´∀｀）`,
-    ``
+    ``,
+    `<丶｀∀´>`
 ];
 
 //they desc
@@ -50,7 +55,8 @@ var desc = [
 'this is where i put all of my slop and sludge and endeavors. you might be here.',
 'aero :)',
 `A comprehensive personal blog (that's more like a wiki in reality)`,
-'A random site where I put my stuff I guess'
+'A random site where I put my stuff I guess',
+'peach-scented princess castle'
 ];
 
 //the name of the ring
