@@ -84,9 +84,11 @@
 #AAring .ascii {
   text-align: left;
   display: block;
-  width: 150px;
+  width: 82px;
   margin-top: 5px;
   font-family: Mona, MS PGothic, "Mona", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #AAring .ascii {
