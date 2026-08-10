@@ -20,7 +20,7 @@ var wname = [
     'Kitsune',
     'Hal',
     'AY',
-    'dethunikorn'
+    'nagisa'
 ];
 
 //they button
