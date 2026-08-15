@@ -3,60 +3,66 @@
 // it was originally made by joey + mord of allium (蒜) house, last updated 2020-11-24
 
 // === ONIONRING-VARIABLES ===
-//this file contains the stuff you edit to set up your specific webring
+// NOW , YOU MUST CREATE A VESSEL.
 
-//the full URLs of all the sites in the ring
-var sites = [
-    'https://bloxy97.nekoweb.org/',
-    'https://mylilarea.nekoweb.org/',
-    'https://hal.nekoweb.org/',
-    'https://ay-3-8910-online.w10.site/',
-    'https://nagisako.neocities.org'
-];
-
-//they name
+// NAME THE CREATOR.
 var wname = [
     'Roxy',
     'Kitsune',
     'Hal',
     'AY',
-    'nagisa'
+    'nagisa',
+    'WencesByte'
 ];
 
-//they button
-var sbutton = [
-    'https://bloxy97.nekoweb.org/images/button.gif',
-    'https://mylilarea.nekoweb.org/MyLilAreaButton.jpeg',
-    'https://hal.nekoweb.org/sitebutton.png',
-    'https://files.catbox.moe/l3g0r4.png',
-    'https://nagisako.neocities.org/images/buttons/taskbar/blonde%20moment.jpg'
-];
-
-//site name
+// AND THEIR VESSEL?
 var sname = [
     'Action97',
     'My Lil Area',
     'HAL',
     `AY's site`,
-    'nagisako'
+    'nagisako',
+    'wencesbyte.net'
 ];
 
-//they tag
-var tags = [
-    `（　´∀｀）`,
-    `（　´∀｀）`,
-    `（　´∀｀）`,
-    ``,
-    `<丶｀∀´>`
+// SELECT THE LINK THAT YOU PREFER.
+var sites = [
+    'https://bloxy97.nekoweb.org/',
+    'https://mylilarea.nekoweb.org/',
+    'https://hal.nekoweb.org/',
+    'https://ay-3-8910-online.w10.site/',
+    'https://nagisako.neocities.org',
+    'https://wencesbyte.net'
 ];
 
-//they desc
+// SELECT THE IMAGE THAT YOU PREFER.
+var sbutton = [
+    'https://bloxy97.nekoweb.org/images/button.gif',
+    'https://mylilarea.nekoweb.org/MyLilAreaButton.jpeg',
+    'https://hal.nekoweb.org/sitebutton.png',
+    'https://files.catbox.moe/l3g0r4.png',
+    'https://nagisako.neocities.org/images/buttons/taskbar/blonde%20moment.jpg',
+    'https://wencesbyte.net/img/webbutton.gif'
+];
+
+// HOW WOULD YOU DESCRIBE YOUR VESSEL? (IT WILL NOT HEAR.)
 var desc = [
 'this is where i put all of my slop and sludge and endeavors. you might be here.',
 'aero :)',
 `A comprehensive personal blog (that's more like a wiki in reality)`,
 'A random site where I put my stuff I guess',
-'peach-scented princess castle'
+'peach-scented princess castle',
+'My personal site with programs, games, art and more stuff!'
+];
+
+// NOW, GIVE IT A GIFT.
+var tags = [
+    `（　´∀｀）`,
+    `（　´∀｀）`,
+    `（　´∀｀）`,
+    ``,
+    `<丶｀∀´>`,
+    ''
 ];
 
 //the name of the ring
