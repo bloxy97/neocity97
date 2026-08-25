@@ -18,7 +18,7 @@ var wname = [
 // AND THEIR VESSEL?
 var sname = [
     'Action97',
-    'My Lil Area',
+    'Ichinisanhai',
     'HAL',
     `AY's site`,
     'nagisako',
@@ -28,7 +28,7 @@ var sname = [
 // SELECT THE LINK THAT YOU PREFER.
 var sites = [
     'https://bloxy97.nekoweb.org/',
-    'https://mylilarea.nekoweb.org/',
+    'https://ichinisanhai.nekoweb.org/',
     'https://hal.nekoweb.org/',
     'https://ay-3-8910-online.w10.site/',
     'https://nagisako.neocities.org',
@@ -38,7 +38,7 @@ var sites = [
 // SELECT THE IMAGE THAT YOU PREFER.
 var sbutton = [
     'https://bloxy97.nekoweb.org/images/button.gif',
-    'https://mylilarea.nekoweb.org/MyLilAreaButton.jpeg',
+    'https://ichinisanhai.nekoweb.org/MyLilAreaButton.jpeg',
     'https://hal.nekoweb.org/sitebutton.png',
     'https://files.catbox.moe/l3g0r4.png',
     'https://nagisako.neocities.org/images/buttons/taskbar/blonde%20moment.jpg',
