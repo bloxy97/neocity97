@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: Mona, MS PGothic, Satimaar, giko2, MS Gothic;
+  font-family: MS PGothic, Mona, Satimaar, giko2, MS Gothic;
   color: #fff;
   background: #808080;
   background: url("/images/syopng.png") repeat-x, url('/images/puyopng.png') bottom repeat-x, linear-gradient(to bottom, #232323, #000);
@@ -128,12 +128,12 @@ dd {
 }
 
 .desc {
-  border: 1px inset #fff;
+  border: 3px inset #111;
   margin: 10px;
   padding: 5px;
   height: 290px;
   overflow-y: scroll;
-  text-overflow: auto;
+  background: #232323;
 }
 
 .picture {

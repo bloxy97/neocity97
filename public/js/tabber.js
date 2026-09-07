@@ -1,3 +1,11 @@
+const url = new URLSearchParams(window.location.search);
+
+const tabis = url.get('tabis')
+
+if (tabis == null) {
+    tabis = "t1"
+}
+
 function openTab(tabs) {
     var i;
     var x = document.getElementsByClassName("content");
@@ -15,4 +23,5 @@ function syobonRandomize() {
 }
 
 syobonRandomize()
+openTab(tabis);
 //you are the shortest js ever

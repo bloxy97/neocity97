@@ -30,7 +30,7 @@ if (thisIndex == null) {
   tag.insertAdjacentHTML('afterbegin', `
 <table>
   <tr>
-    <td>Hey... I don't think you're part of ${ringID} yet.</td>
+    <td>Hey... I don't think you're part of ${ringID} yet. Did'ja send that <a href="https://bloxy97.nekoweb.org/aaring/#join">email</a> yet?</td>
   </tr>
 </table>
   `);
